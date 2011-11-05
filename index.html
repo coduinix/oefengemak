@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sommen Generator</title>
+		<style type="text/css" media="print">
+			.noprint {display: none;}
+			.form {width: 100%};
+		</style>
+		<style type="text/css" media="screen">
+			.config {width: 20%;}
+			.form {width: 80%};
+		</style>
+		<style type="text/css">
+		body, td{font-family:arial,sans-serif;font-size:10pt}
+		.config, .form {float: left;}
+		.form-head {width: 100%; height: 40px; font-weight: bold; font-size: 120%;}
+		.form-title {float: left;}
+		.name-input {float: right;}
+		
+		.box {border: 1px solid #000000; width: 10em; padding-top: 1em; padding-bottom: 1em; padding-left: 0.5em; float: left; margin: 1em 0.5em;}
+		.box table tr td {height: 1.5em;}
+		.box table tr td {text-align: right}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+		
+		<script id="blockTmpl" type="text/x-jquery-tmpl">
+			<div class="box">
+				<table>
+					{{each exercises}}
+						<tr><td>${$value.lhs}</td><td>x</td><td>${$value.rhs}</td><td>=</td><td>&nbsp;</td></tr>
+					{{/each}}
+				</table>
+			</div>
+		</script>
+		<script id="excerciseTmpl" type="text/x-jquery-tmpl">
+		  <tr><td>${$value.lhs}</td><td>x</td><td>${$value.rhs}</td><td>=</td><td>&nbsp;</td></tr>
+		</script>
+		
+		<script type="text/javascript">
+			function shuffleArray(target)  {
+				target.sort(function(){return Math.round(Math.random());});
+			}
+			
+			function TableSet(nr) {
+				this.nr = nr;
+				this.exercises = new Array();
+			}
+			
+			TableSet.prototype.initExercises = function () {
+				var i;
+				for (i = 0; i < 10; i++) {
+					var exercise = {lhs: i+1, rhs: this.nr};
+					this.exercises[i] = exercise;
+				}
+				shuffleArray(this.exercises);
+			}
+			
+			TableSet.prototype.pickValue = function () {
+				if (this.exercises.length == 0) {
+					this.initExercises();
+				}
+				var result = this.exercises.pop()
+				return result;
+			};
+			
+			function generateAllExercises(tables, exerciseCount) {
+				var tableIdx = 0;
+				var allExercises = new Array();
+				var i;
+				for (i = 0; i < exerciseCount; i++) {
+					if (tableIdx > tables.length - 1) {
+						tableIdx = 0;
+					}
+					var exercise = tables[tableIdx].pickValue()
+					allExercises[i] = exercise;
+					tableIdx++;
+				}
+				return allExercises;
+			}
+			
+			function renderExercises(exercises, perBlock, blockCount) {
+				var start = 0;
+				for (var i = 0; i < blockCount; i++) {
+					var endIndex = start+perBlock;
+					var blockExercises = exercises.slice(start, start+perBlock);
+					$.tmpl('block', {exercises: blockExercises}).appendTo('#blockHolder');
+					start = endIndex;
+				}
+			}
+			
+			function generateExercises(tables, perBlock, blockCount) {
+				var totalCount = perBlock * blockCount;
+				var allExercises = generateAllExercises(tables, totalCount);
+				shuffleArray(allExercises);
+				renderExercises(allExercises, perBlock, blockCount);
+			}
+			
+			$(document).ready(function() {
+				$( "#blockTmpl" ).template("block" );
+				var ts = new TableSet(5);
+				
+				$('#generate').button().click(function() {
+					$('#blockHolder').empty();
+					var tables = new Array();
+					$(':checkbox:checked').each(function (idx, cb) {
+						tables.push(new TableSet(parseInt(cb.value)));
+					});
+					var perBlock = parseInt($('#perBlock').val());
+					var blockCount = parseInt($('#blockCount').val());
+					$('#formTitle').text($('#formTitleInput').val());
+					generateExercises(tables, perBlock, blockCount);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="config noprint">
+			<div class="form-input">
+				<fieldset>
+					<label for="formTitleInput">Titel formulier</label><br/>
+					<input type="text" id="formTitleInput"/>
+				</fieldset>
+				<fieldset>
+					<input type="checkbox" value="0">Tafel 0</input><br/>
+					<input type="checkbox" value="1">Tafel 1</input><br/>
+					<input type="checkbox" value="2">Tafel 2</input><br/>
+					<input type="checkbox" value="3">Tafel 3</input><br/>
+					<input type="checkbox" value="4">Tafel 4</input><br/>
+					<input type="checkbox" value="5">Tafel 5</input><br/>
+					<input type="checkbox" value="6">Tafel 6</input><br/>
+					<input type="checkbox" value="7">Tafel 7</input><br/>
+					<input type="checkbox" value="8">Tafel 8</input><br/>
+					<input type="checkbox" value="9">Tafel 9</input><br/>
+					<input type="checkbox" value="10">Tafel 10</input><br/>
+				</fieldset>
+				<fieldset>
+					<label for="perBlock">Sommen per blok</label>
+					<input type="text" id="perBlock" value="5"/><br/>
+					<label for="blockCount">Aantal blokken</label>
+					<input type="text" id="blockCount"/><br/>
+				</fieldset>
+			</div>
+			<button id="generate">Genereer formulier</button>
+		</div>
+		<div class="form">
+			<div class="form-head">
+				<div class="form-title" id="formTitle">Formulier titel</div>
+				<div class="name-input">
+					<span>Naam:</span>
+					<span class="name-placeholder">______________</span>
+				</div>
+			</div>
+			<div id="blockHolder">
+			</div>
+		</div>
+	</body>
+</html>
