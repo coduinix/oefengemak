@@ -3,9 +3,13 @@
 	<head>
 		<title>Sommen Generator</title>
 		<link rel="stylesheet" href="css/general.css" type="text/css"/>
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 		<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		
+		<script src="js/generator.js"></script>
 		
 		<script id="blockTmpl" type="text/x-jquery-tmpl">
 			<div class="box">
@@ -21,46 +25,6 @@
 		</script>
 		
 		<script type="text/javascript">
-			function shuffleArray(target)  {
-				target.sort(function(){return Math.round(Math.random());});
-			}
-			
-			function TableSet(nr) {
-				this.nr = nr;
-				this.exercises = new Array();
-			}
-			
-			TableSet.prototype.initExercises = function () {
-				var i;
-				for (i = 0; i < 10; i++) {
-					var exercise = {lhs: i+1, rhs: this.nr};
-					this.exercises[i] = exercise;
-				}
-				shuffleArray(this.exercises);
-			}
-			
-			TableSet.prototype.pickValue = function () {
-				if (this.exercises.length == 0) {
-					this.initExercises();
-				}
-				var result = this.exercises.pop()
-				return result;
-			};
-			
-			function generateAllExercises(tables, exerciseCount) {
-				var tableIdx = 0;
-				var allExercises = new Array();
-				var i;
-				for (i = 0; i < exerciseCount; i++) {
-					if (tableIdx > tables.length - 1) {
-						tableIdx = 0;
-					}
-					var exercise = tables[tableIdx].pickValue()
-					allExercises[i] = exercise;
-					tableIdx++;
-				}
-				return allExercises;
-			}
 			
 			function renderExercises(exercises, perBlock, blockCount) {
 				var start = 0;
@@ -74,9 +38,9 @@
 			
 			function generateExercises(tables, perBlock, blockCount) {
 				var totalCount = perBlock * blockCount;
-				var allExercises = generateAllExercises(tables, totalCount);
-				shuffleArray(allExercises);
-				renderExercises(allExercises, perBlock, blockCount);
+				var exercises = generateMixedExercises(tables, totalCount);
+				
+				renderExercises(exercises, perBlock, blockCount);
 			}
 			
 			$(document).ready(function() {
@@ -87,7 +51,7 @@
 					$('#blockHolder').empty();
 					var tables = new Array();
 					$(':checkbox:checked').each(function (idx, cb) {
-						tables.push(new TableSet(parseInt(cb.value)));
+						tables.push(parseInt(cb.value));
 					});
 					var perBlock = parseInt($('#perBlock').val());
 					var blockCount = parseInt($('#blockCount').val());
@@ -98,13 +62,14 @@
 		</script>
 	</head>
 	<body>
-		<div class="config noprint">
-			<div class="form-input">
-				<fieldset>
+		<div class="config ui-widget noprint">
+			<div class="ui-widget-header">Configuratie</div>
+			<div class="form-input ui-widget-content">
+				<div class="ui-widget ui-widget-content">
 					<label for="formTitleInput">Titel formulier</label><br/>
 					<input type="text" id="formTitleInput"/>
-				</fieldset>
-				<fieldset>
+				</div>
+				<div class="ui-widget ui-widget-content">
 					<input type="checkbox" value="0">Tafel 0</input><br/>
 					<input type="checkbox" value="1">Tafel 1</input><br/>
 					<input type="checkbox" value="2">Tafel 2</input><br/>
@@ -116,13 +81,13 @@
 					<input type="checkbox" value="8">Tafel 8</input><br/>
 					<input type="checkbox" value="9">Tafel 9</input><br/>
 					<input type="checkbox" value="10">Tafel 10</input><br/>
-				</fieldset>
-				<fieldset>
+				</div>
+				<div class="ui-widget ui-widget-content">
 					<label for="perBlock">Sommen per blok</label>
 					<input type="text" id="perBlock" value="5"/><br/>
 					<label for="blockCount">Aantal blokken</label>
 					<input type="text" id="blockCount"/><br/>
-				</fieldset>
+				</div>
 			</div>
 			<button id="generate">Genereer formulier</button>
 		</div>
