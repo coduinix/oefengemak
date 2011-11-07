@@ -6,30 +6,9 @@
 		<link type="text/css" href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-		<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
 		
 		<script src="js/generator.js"></script>
-		
-		<script id="studentBlockTmpl" type="text/x-jquery-tmpl">
-			<div class="box">
-				<table>
-					{{each exercises}}
-						<tr><td>${$value.lhs}</td><td>x</td><td>${$value.rhs}</td><td>=</td><td>&nbsp;</td></tr>
-					{{/each}}
-				</table>
-			</div>
-		</script>
-		<script id="teacherBlockTmpl" type="text/x-jquery-tmpl">
-			<div class="box">
-				<table>
-					{{each exercises}}
-						<tr><td>${$value.lhs}</td><td>x</td><td>${$value.rhs}</td><td>=</td><td>${$value.result}</td></tr>
-					{{/each}}
-				</table>
-			</div>
-		</script>
-		
 		
 		<script type="text/javascript">
 			function renderRow(exercise, exerciseType, includeAnswer) {
@@ -83,14 +62,6 @@
 				renderBlocks(exercises, perBlock, resultBlockCount, 'result');
 				renderBlocks(exercises, perBlock, rhsBlockCount, 'rhs');
 				renderBlocks(exercises, perBlock, lhsBlockCount, 'lhs');
-				/*
-				for (var i = 0; i < blockCount; i++) {
-					var endIndex = start+perBlock;
-					var blockExercises = exercises.slice(start, start+perBlock);
-					$.tmpl('studentBlock', {exercises: blockExercises}).appendTo('#studentBlockHolder');
-					$.tmpl('teacherBlock', {exercises: blockExercises}).appendTo('#teacherBlockHolder');
-					start = endIndex;
-				}*/
 			}
 			
 			function generateExercises(tables, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
