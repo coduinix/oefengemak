@@ -1,18 +1,18 @@
 @media print {
 	.noprint {display: none;}
-	.form {width: auto; margin: 0; float: none;}
+	.form {width: 100%; margin: 0; float: none;}
 	.page {page-break-after: always; page-break-inside: avoid;}
 }
 
 @media screen {
-	.form {width: 80%;}
-	/*div#teacherBlockHolder {float: none;}*/
-	.page{clear: right;}
+	.form {width: 80%; float:right;}
+	.page{clear: both;}
 }
 
 @media screen,print {
 	body, td {font-family:arial,sans-serif; font-size:10pt; }
-	html, body{height: 100%; width: 100%; margin: 0; padding: 0;}
+	html, body{margin: 0; padding: 0;}
+	.wrap {margin:0 auto; width: 100%;}
 	.config {float: left; width: 18%; margin-right: 10px; margin-bottom: 1000px; padding: 5px; border-right: 1px solid #BCBCBC; background-color: #EFEFEF; height: 100%;}
 
 	.page {float:none;}
