@@ -72,9 +72,6 @@
 			}
 			
 			$(document).ready(function() {
-				$( "#studentBlockTmpl" ).template("studentBlock" );
-				$( "#teacherBlockTmpl" ).template("teacherBlock" );
-				
 				$('#generate').button().click(function() {
 					$('.box-container').empty();
 					var tables = new Array();
@@ -118,9 +115,9 @@
 					<label for="resultBlockCount">Aantal 6x5=...</label><br/>
 					<input type="number" id="resultBlockCount" min="0" value="4"/><br/>
 					<label for="lhsBlockCount">Aantal ...x5=30</label><br/>
-					<input type="number" id="lhsBlockCount" min="0" value="0"/><br/>
+					<input type="number" id="lhsBlockCount" min="0" value="4"/><br/>
 					<label for="rhsBlockCount">Aantal 6x...=30</label><br/>
-					<input type="number" id="rhsBlockCount" min="0" value="4"/><br/>
+					<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
 				</div>
 			</div>
 			<button id="generate">Genereer formulier</button>
