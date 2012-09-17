@@ -19,6 +19,12 @@
 	.page-head {width: 100%; height: 40px; font-weight: bold; font-size: 120%;}
 	.form-title {float: left;}
 	.name-input {float: right;}
+	
+	.exercise {float: left; width: 10em; padding-top: 1em; padding-bottom: 1em; padding-left: 0.5em; margin: 1em 0.5em;}
+	.splitPart{width: 1.5em;}
+	.splitTop {border-bottom: 1px solid black; text-align:center;}
+	.splitLeft {border-right: 1px solid black; padding-right: 0.5em; text-align: right;}
+	.splitRight {padding-left: 0.5em; text-align: left;}
 
 	.box {float: left; border: 1px solid #000000; width: 10em; padding-top: 1em; padding-bottom: 1em; padding-left: 0.5em; margin: 1em 0.5em;}
 	.box table tr td {height: 1.5em;}

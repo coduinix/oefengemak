@@ -1,3 +1,9 @@
+function shuffleArray(target)  {
+	var temp = [];
+	while (target.length) temp.push(target.splice(Math.random() * target.length, 1)[0]);
+	while (temp.length) target.push(temp.pop());
+	return target;
+}
 
 function ExcerciseSet(nr, func) {
 	this.nr = nr;
@@ -18,8 +24,8 @@ ExcerciseSet.prototype.pickValue = function () {
 	return result;
 };
 
-function generateMixedExercises(nrs, exerciseCount) {
-	var allExercises = generateAllExercises(nrs, exerciseCount);
+function generateMixedExercises(nrs, exerciseCount, func) {
+	var allExercises = generateAllExercises(nrs, exerciseCount, func);
 	shuffleArray(allExercises);
 	return allExercises;
 }
