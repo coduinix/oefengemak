@@ -17,7 +17,7 @@
 				var renderedBlock = '<div class="exercise"><table cellspacing="0">';
 				var topText = exercise.result;
 				var leftText = exercise.lhs;
-				var rightText = includeAnswer ? '<b>' + exercise.rhs + '</b>' : '...';
+				var rightText = includeAnswer ? '<b>' + exercise.rhs + '</b>' : '&nbsp;';
 				
 				renderedBlock += '<tr><td class="splitTop" colspan="2">' + topText + '</td></tr>';
 				renderedBlock += '<tr><td class="splitPart splitLeft">' + leftText + '</td><td class="splitPart splitRight">' + rightText + '</td></tr>';
@@ -26,7 +26,6 @@
 			}
 		
 			function renderBlock(exercise) {
-				console.log("Rendering", exercise);
 				appendBlock('#studentBlockHolder', exercise, false);
 				appendBlock('#teacherBlockHolder', exercise, true);
 			}
@@ -40,7 +39,6 @@
 			
 			function generateExercises(nrs, exerciseCount) {
 				var exercises = generateMixedExercises(nrs, exerciseCount, generateSplitsSommen);
-				console.log(exercises);
 				renderExercises(exercises);
 			}
 			

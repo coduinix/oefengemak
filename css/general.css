@@ -21,7 +21,8 @@
 	.name-input {float: right;}
 	
 	.exercise {float: left; width: 10em; padding-top: 1em; padding-bottom: 1em; padding-left: 0.5em; margin: 1em 0.5em;}
-	.splitPart{width: 1.5em;}
+	.exercise table tr td {font-size: 150%; }
+	.splitPart{width: 1.5em; padding-top: 0.3em; padding-bottom: 0.3em;}
 	.splitTop {border-bottom: 1px solid black; text-align:center;}
 	.splitLeft {border-right: 1px solid black; padding-right: 0.5em; text-align: right;}
 	.splitRight {padding-left: 0.5em; text-align: left;}
