@@ -1,12 +1,42 @@
 <?xml version="1.0"?>
 <project name="sommen" default="upload">
 	<property file="build.properties"/>
+	<property name="build.directory" location="target/webapp"
 	
-	<target name="upload">
-		<ftp server="${ftp.hostname}" userid="${ftp.username}" password="${ftp.password}" passive="true" remotedir="sommen">
-			<fileset dir="${basedir}">
-				<exclude name="build.*"/>
+	<import file="${sdk.dir}/config/user/ant-macros.xml" />
+	
+	<path id="project.classpath">
+		<pathelement path="src/main/webapp/WEB-INF/classes" />
+		<fileset dir="src/main/webapp/WEB-INF/lib">
+			<include name="**/*.jar" />
+		</fileset>
+		<fileset dir="${sdk.dir}/lib">
+			<include name="shared/**/*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="clean">
+		<delete dir="${build.directory}"/>
+	</target>
+
+	<target name="copyjars" description="Copies the App Engine JARs to the WAR.">
+		<copy todir="${build.directory}/WEB-INF/lib" flatten="true">
+			<fileset dir="${sdk.dir}/lib/user">
+				<include name="**/*.jar" />
 			</fileset>
-		</ftp>
+		</copy>
+	</target>
+	
+	<target name="compile" depends="copyjars" description="Copies other source files to the WAR.">
+		<mkdir dir="${build.directory}/WEB-INF/classes" />
+		<copy todir="${build.directory}">
+			<fileset dir="src/main/webapp">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="update" depends="compile" description="Uploads the application to App Engine.">
+		<appcfg action="update" war="${build.directory}" />
 	</target>
 </project>
