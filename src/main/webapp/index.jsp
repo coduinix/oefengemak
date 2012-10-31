@@ -9,14 +9,15 @@
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
 	</head>
 	<body>
+		<%@include file='analyticstracking.jsp'%>
 		<div class="wrap">
 			<div class="ui-widget">
 				<div class="ui-widget-header">Oefensommen genereren</div>
 				<div class="form-input ui-widget-content">
 					Kies voor een van onderstaande types sommen om te genereren:
 					<ul>
-						<li><a href="splitsen.html">Splitsen</a></li>
-						<li><a href="tafels.html">Tafels</a></li>
+						<li><a href="splitsen.jsp">Splitsen</a></li>
+						<li><a href="tafels.jsp">Tafels</a></li>
 					</ul>
 				</div>
 			</div>

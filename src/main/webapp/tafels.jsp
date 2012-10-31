@@ -89,6 +89,7 @@
 		</script>
 	</head>
 	<body>
+		<%@include file='analyticstracking.jsp'%>
 		<div class="wrap">
 			<div class="config ui-widget noprint">
 				<div class="ui-widget-header">Configuratie</div>
