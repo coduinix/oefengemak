@@ -3,6 +3,7 @@
 	html, body{margin: 0; padding: 0;}
 	img {border: 0}
 	h1 {font: bold 200% arial; letter-spacing: -1px; margin: 0;}
+	h3 {font: bold 1em arial; letter-spacing: -1px; font-size: 100%;}
 	
 	#container {margin:0; padding: 0; min-width: 800px;}
 	#header {margin: 0 0 18px 0; padding: 0;}
@@ -40,3 +41,7 @@
 	.box .box-content {margin: 0; padding: 0; background: #fff url("../images/bg-box-blue-borders.gif") repeat-y left top; position: relative;}
 	.box .box-content-2 {margin: 0; padding: 10px 12px 0 12px; background: url("../images/bg-box-blue-borders.gif") repeat-y right top;}
 	
+	.tag-head {background: #d6e8f5; border: 2px solid #77b2df; margin: 0 0 5px 0; padding: 3px 5px; color: #33597f; font-weight: bold; overflow: auto;}
+	.section {margin: 0; padding: 0 0 15px 0; line-height: 130%;}
+	.news-date {font-style: italic; padding-right: 10px; color: #1c497b; font-size: 80%;}
+}
