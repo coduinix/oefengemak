@@ -1,0 +1,42 @@
+@media screen,print {
+	body, p, td {color: #000000; font-family:arial,sans-serif; font-size:0.8em; }
+	html, body{margin: 0; padding: 0;}
+	img {border: 0}
+	h1 {font: bold 200% arial; letter-spacing: -1px; margin: 0;}
+	
+	#container {margin:0; padding: 0; min-width: 800px;}
+	#header {margin: 0 0 18px 0; padding: 0;}
+	#quote {margin: 0; padding: 0; float: left; width: 40%; color: #333; font-size: 10px;}
+	#quote p {margin: 3px 0px 0px 30px; position: relative; }
+	#columns-container{padding-left: 10px; margin-right: 355px; zoom: 1;}
+	#content {margin: 0; padding: 0; float: left; width: 100%; line-height: 130%; position: relative; zoom: 1;}
+	#content-wrapper {margin: 0 10px 0 10px; padding: 0; zoom: 1;}
+	
+	.logo { position: absolute; top: 15px; }
+	.logo-box { float: left; margin: 6px 32px 6px 26px; padding: 0;}
+	.logo-img {display: block; margin-left: 4px;}
+	.clearer {clear: both; height: 1px; overflow: hidden; margin: 0; padding: 0;}
+	.navigation {margin: 10 0 10 10;}
+	.menu {display: block; height: 30px; width: 100%;left: 0px; background: url("../images/bg-menu-border-top.gif") left top repeat-x; z-index: 100;}
+	.menu-content {background: #e2e7ea; margin: 1px 20px 0 20px; padding: 0; height: 30px; font-size: 1px; display: block; min-width: 800px;}
+	
+	.menu-content ul {float: left; padding: 9px 0 0 12px; }
+	.menu-content .menu-start {float: left; background: url("../images/div-submenu-bg-start.gif") left top no-repeat; width: 5px; height: 31px; margin-top: -1px;}
+	.menu-content .menu-end {float: right; position: relative; background: url("../images/div-submenu-bg-end.gif") left top no-repeat; width: 5px; height: 31px; margin-top: -1px;}
+	
+	.navigation ul li {display: inline; list-style-type: none; font-size: 15px; line-height: 16px; color: #666666;}
+	.navigation ul li a {float: left; text-decoration: none; display: block;}
+	.menu-content ul li {padding: 0; margin: 0;}
+	.menu-content ul li a {background: none; height: auto; font-size: 13px; line-height: 13px; color: #141414; margin: 0 25px 0 0; padding: 0;}
+	
+	.box {background: url("../images/bg-box-h-blue-l.gif") no-repeat top left; margin: 0; padding: 0;}
+	
+	#content  .box h2 {background: url("../images/bg-box-h-blue-r.gif") no-repeat top right; color: #fff; font-size: 100%; padding: 4px 160px 4px 5px; margin: 0;}
+	.box .box-bottom {margin: 0; padding: 0; height: 1px; overflow: hidden; clear: both;}
+	.box .top-corners {margin: 0; padding: 0; height: 6px; overflow: hidden; background: #fff url("../images/bg-box-t-blue-l.gif") no-repeat top left;}
+	.box .top-corners div {margin: 0; padding: 0; height: 6px; background: url("../images/bg-box-t-blue-r.gif") no-repeat top right;}
+	.box .bottom-corners {margin: 0; padding: 0; height: 11px; overflow: hidden; background: #fff url("../images/bg-box-b-blue-l.gif") no-repeat top left;}
+	.box .bottom-corners div {margin: 0; padding: 0; height: 11px; background: url("../images/bg-box-b-blue-r.gif") no-repeat top right;}
+	.box .box-content {margin: 0; padding: 0; background: #fff url("../images/bg-box-blue-borders.gif") repeat-y left top; position: relative;}
+	.box .box-content-2 {margin: 0; padding: 10px 12px 0 12px; background: url("../images/bg-box-blue-borders.gif") repeat-y right top;}
+	
