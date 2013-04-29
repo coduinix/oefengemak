@@ -92,10 +92,10 @@
 		<%@include file='analyticstracking.jsp'%>
 		<div class="wrap">
 			<div class="config ui-widget noprint">
-				<div class="ui-widget-header">Configuratie</div>
+				<div class="ui-widget-header">Opties</div>
 				<div class="form-input ui-widget-content">
 					<div class="">
-						<label for="formTitleInput">Titel formulier</label><br/>
+						<label for="formTitleInput">Titel oefenblad</label><br/>
 						<input type="text" id="formTitleInput"/>
 					</div>
 					<div class="">
@@ -122,12 +122,12 @@
 						<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
 					</div>
 				</div>
-				<button id="generate">Genereer formulier</button>
+				<button id="generate">Maak oefenblad</button>
 			</div>
 			<div class="form">
 				<div class="page student">
 					<div class="page-head">
-						<div class="form-title">Formulier titel</div>
+						<div class="form-title">Titel oefenblad</div>
 						<div class="name-input">
 							<span>Naam:</span>
 							<span class="name-placeholder">______________</span>
@@ -138,7 +138,7 @@
 				</div>
 				<div class="page teacher">
 					<div class="page-head">
-						<div class="form-title" >Formulier titel</div>
+						<div class="form-title">Titel oefenblad</div>
 						<div class="name-input">
 							<span>Antwoordenvel</span>
 						</div>
