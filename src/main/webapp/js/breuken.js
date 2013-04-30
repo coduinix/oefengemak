@@ -21,14 +21,20 @@ Fraction.prototype.convert = function(newDenominator) {
 	return new Fraction(this.numerator * factor, this.denominator * factor);
 }
 
-Fraction.prototype.add = function (otherFraction) {
-	if (this.denominator == otherFraction.denominator) {
-		return new Fraction(this.numerator + otherFraction.numerator, this.denominator);
+function add(fraction, otherFraction) {
+	var sum = function(a,b) {return a+b;};
+	return combine(fraction, otherFraction, sum);
+}
+
+function combine(fraction, otherFraction, func) {
+	if (fraction.denominator == otherFraction.denominator) {
+		var newNumerator = func(fraction.numerator, otherFraction.numerator);
+		return new Fraction(newNumerator, fraction.denominator);
 	} else {
-		var newDenominator = lcd(this.denominator, otherFraction.denominator);
-		var converted = this.convert(newDenominator);
+		var newDenominator = lcd(fraction.denominator, otherFraction.denominator);
+		var converted = fraction.convert(newDenominator);
 		var otherConverted = otherFraction.convert(newDenominator);
-		return converted.add(otherConverted).reduce();
+		return combine(converted, otherConverted, func).reduce();
 	}
 }
 
@@ -44,7 +50,7 @@ function generateAddFractions(maxFraction, count) {
 	for (var i = 0; i < count; i++) {
 		var lhs = randomFraction(maxDenominator);
 		var rhs = randomFraction(maxDenominator);
-		var result = lhs.add(rhs);
+		var result = add(lhs, rhs);
 		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: '+'});
 	}
 	console.log(exercises);
