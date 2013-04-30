@@ -1,8 +1,12 @@
 function gcd(a, b) {
+	a = Math.abs(a);
+	b = Math.abs(b);
 	return b ? gcd(b, a%b) : a;
 }
 
 function lcd(a, b) { 
+	a = Math.abs(a);
+	b = Math.abs(b);
 	return ( a / gcd(a,b) ) * b; 
 }
 
@@ -22,8 +26,13 @@ Fraction.prototype.convert = function(newDenominator) {
 }
 
 function add(fraction, otherFraction) {
-	var sum = function(a,b) {return a+b;};
-	return combine(fraction, otherFraction, sum);
+	var func = function(a,b) {return a+b;};
+	return combine(fraction, otherFraction, func);
+}
+
+function subtract(fraction, otherFraction) {
+	var func = function(a,b) {return a-b;};
+	return combine(fraction, otherFraction, func);
 }
 
 function combine(fraction, otherFraction, func) {
@@ -44,15 +53,21 @@ function randomFraction(maxDenominator) {
 	return new Fraction(numerator, denominator);
 }
 
-function generateAddFractions(maxFraction, count) {
+function generateFractionExercises(maxDenominator, count, combineFunc, operator) {
 	var exercises = [];
-	var maxDenominator = maxFraction;
 	for (var i = 0; i < count; i++) {
 		var lhs = randomFraction(maxDenominator);
 		var rhs = randomFraction(maxDenominator);
-		var result = add(lhs, rhs);
-		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: '+'});
+		var result = combineFunc(lhs, rhs);
+		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: operator});
 	}
-	console.log(exercises);
 	return exercises;
+}
+
+function generateAddFractions(maxDenominator, count) {
+	return generateFractionExercises(maxDenominator, count, add, '+');
+}
+
+function generateSubtractFractions(maxDenominator, count) {
+	return generateFractionExercises(maxDenominator, count, subtract, '-');
 }

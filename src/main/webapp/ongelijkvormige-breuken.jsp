@@ -38,7 +38,9 @@
 				
 				if (numerator == denominator)
 					result += '<tr><td>1</td></tr>';
-				else if (numerator > denominator) {
+				else if (numerator == 0)
+					result += '<tr><td>0</td></tr>';
+				else if (Math.abs(numerator) > 0 && numerator > denominator) {
 					var remainder = numerator % denominator;
 					var wholeNumber = (numerator - remainder) / denominator;
 					if (remainder > 0) {
@@ -78,7 +80,9 @@
 			}
 			
 			function generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount) {
-				var exercises = generateAddFractions(maxFraction, perBlock * addBlockCount);
+				var exercises = [];
+				exercises = exercises.concat(generateAddFractions(maxFraction, perBlock * addBlockCount));
+				exercises = exercises.concat(generateSubtractFractions(maxFraction, perBlock * subtractBlockCount));
 				renderBlocks(exercises, perBlock);
 			}
 			
@@ -93,7 +97,6 @@
 					var subtractBlockCount = parseInt($('#subtractBlockCount').val());
 					var multiplyBlockCount = parseInt($('#multiplyBlockCount').val());
 					
-					console.log("perBlock", perBlock, "addBlockCount", addBlockCount, "maxFraction", maxFraction);
 					generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount);
 				});
 			});
