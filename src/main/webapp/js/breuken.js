@@ -1,6 +1,6 @@
-function gcd(a, b){
+function gcd(a, b) {
 	return b ? gcd(b, a%b) : a;
-};
+}
 
 function lcd(a, b) { 
 	return ( a / gcd(a,b) ) * b; 
@@ -12,13 +12,41 @@ function Fraction(numerator, denominator) {
 }
 
 Fraction.prototype.reduce = function() {
-	gcd = gcd(numerator, denominator);
-	return new Fraction(numerator / gcd, denominator / gcd);
+	var factor = gcd(this.numerator, this.denominator);
+	return new Fraction(this.numerator / factor, this.denominator / factor);
+}
+
+Fraction.prototype.convert = function(newDenominator) {
+	var factor = newDenominator / this.denominator;
+	return new Fraction(this.numerator * factor, this.denominator * factor);
+}
+
+Fraction.prototype.add = function (otherFraction) {
+	if (this.denominator == otherFraction.denominator) {
+		return new Fraction(this.numerator + otherFraction.numerator, this.denominator);
+	} else {
+		var newDenominator = lcd(this.denominator, otherFraction.denominator);
+		var converted = this.convert(newDenominator);
+		var otherConverted = otherFraction.convert(newDenominator);
+		return converted.add(otherConverted).reduce();
+	}
+}
+
+function randomFraction(maxDenominator) {
+	var denominator = randRange(2, maxDenominator);
+	var numerator = randRange(1, denominator - 1);
+	return new Fraction(numerator, denominator);
 }
 
 function generateAddFractions(maxFraction, count) {
-	var exerciseOne = {lhs: new Fraction(1, 2), rhs: new Fraction(5, 6), result: new Fraction(8, 6), operator: '+'};
-	var exerciseTwo = {lhs: new Fraction(1, 2), rhs: new Fraction(27, 28), result: new Fraction(41, 28), operator: '+'};
-	
-	return [exerciseOne, exerciseTwo];
+	var exercises = [];
+	var maxDenominator = maxFraction;
+	for (var i = 0; i < count; i++) {
+		var lhs = randomFraction(maxDenominator);
+		var rhs = randomFraction(maxDenominator);
+		var result = lhs.add(rhs);
+		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: '+'});
+	}
+	console.log(exercises);
+	return exercises;
 }

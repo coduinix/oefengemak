@@ -5,6 +5,13 @@ function shuffleArray(target)  {
 	return target;
 }
 
+function randRange(min, max) {
+	
+    var result = Math.floor( Math.random() * (max - min + 1) ) + min;
+	console.log("min", min, "max", max, "result", result);
+	return result;
+}
+
 function ExcerciseSet(nr, func) {
 	this.nr = nr;
 	this.func = func;

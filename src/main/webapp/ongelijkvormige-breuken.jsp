@@ -41,8 +41,12 @@
 				else if (numerator > denominator) {
 					var remainder = numerator % denominator;
 					var wholeNumber = (numerator - remainder) / denominator;
-					numerator = remainder;
-					result += '<tr><td rowspan="2" style="padding-right: 0.3em;">' + wholeNumber + '</td><td class="numerator">' + numerator + '</td></tr><tr><td class="denominator">' + denominator + '</td></tr>';
+					if (remainder > 0) {
+						numerator = remainder;
+						result += '<tr><td rowspan="2" style="padding-right: 0.3em;">' + wholeNumber + '</td><td class="numerator">' + numerator + '</td></tr><tr><td class="denominator">' + denominator + '</td></tr>';
+					} else {
+						result += '<tr><td style="padding-right: 0.3em;">' + wholeNumber + '</td></tr>';
+					}
 				} else {
 					result += '<tr><td class="numerator">' + numerator + '</td></tr><tr><td class="denominator">' + denominator + '</td></tr>';
 				}
@@ -89,6 +93,7 @@
 					var subtractBlockCount = parseInt($('#subtractBlockCount').val());
 					var multiplyBlockCount = parseInt($('#multiplyBlockCount').val());
 					
+					console.log("perBlock", perBlock, "addBlockCount", addBlockCount, "maxFraction", maxFraction);
 					generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount);
 				});
 			});
@@ -113,13 +118,13 @@
 					</div>
 					<div class="">
 						<label for="perBlock">Sommen per blok</label><br/>
-						<input type="number" id="perBlock" value="1" min="1"/><br/>
+						<input type="number" id="perBlock" value="5" min="1"/><br/>
 						<label for="addBlockCount">Aantal optellen</label><br/>
-						<input type="number" id="resultBlockCount" min="0" value="4"/><br/>
+						<input type="number" id="addBlockCount" min="0" value="4"/><br/>
 						<label for="subtractBlockCount">Aantal aftrekken</label><br/>
-						<input type="number" id="lhsBlockCount" min="0" value="4"/><br/>
+						<input type="number" id="subtractBlockCount" min="0" value="4"/><br/>
 						<label for="multiplyBlockCount">Aantal vermenigvuldigen</label><br/>
-						<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
+						<input type="number" id="multiplyBlockCount" min="0" value="0"/><br/>
 					</div>
 				</div>
 				<button id="generate">Maak oefenblad</button>
