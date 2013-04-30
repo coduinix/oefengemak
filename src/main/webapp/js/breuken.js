@@ -35,6 +35,12 @@ function subtract(fraction, otherFraction) {
 	return combine(fraction, otherFraction, func);
 }
 
+function multiply(fraction, otherFraction) {
+	var numerator = fraction.numerator * otherFraction.numerator;
+	var denominator = fraction.denominator * otherFraction.denominator;
+	return new Fraction(numerator, denominator);
+}
+
 function combine(fraction, otherFraction, func) {
 	if (fraction.denominator == otherFraction.denominator) {
 		var newNumerator = func(fraction.numerator, otherFraction.numerator);
@@ -43,7 +49,7 @@ function combine(fraction, otherFraction, func) {
 		var newDenominator = lcd(fraction.denominator, otherFraction.denominator);
 		var converted = fraction.convert(newDenominator);
 		var otherConverted = otherFraction.convert(newDenominator);
-		return combine(converted, otherConverted, func).reduce();
+		return combine(converted, otherConverted, func);
 	}
 }
 
@@ -58,7 +64,7 @@ function generateFractionExercises(maxDenominator, count, combineFunc, operator)
 	for (var i = 0; i < count; i++) {
 		var lhs = randomFraction(maxDenominator);
 		var rhs = randomFraction(maxDenominator);
-		var result = combineFunc(lhs, rhs);
+		var result = combineFunc(lhs, rhs).reduce();
 		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: operator});
 	}
 	return exercises;
@@ -70,4 +76,8 @@ function generateAddFractions(maxDenominator, count) {
 
 function generateSubtractFractions(maxDenominator, count) {
 	return generateFractionExercises(maxDenominator, count, subtract, '-');
+}
+
+function generateMultiplyFractions(maxDenominator, count) {
+	return generateFractionExercises(maxDenominator, count, multiply, 'x');
 }

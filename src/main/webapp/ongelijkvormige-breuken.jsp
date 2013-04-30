@@ -83,6 +83,7 @@
 				var exercises = [];
 				exercises = exercises.concat(generateAddFractions(maxFraction, perBlock * addBlockCount));
 				exercises = exercises.concat(generateSubtractFractions(maxFraction, perBlock * subtractBlockCount));
+				exercises = exercises.concat(generateMultiplyFractions(maxFraction, perBlock * subtractBlockCount));
 				renderBlocks(exercises, perBlock);
 			}
 			
@@ -127,7 +128,7 @@
 						<label for="subtractBlockCount">Aantal aftrekken</label><br/>
 						<input type="number" id="subtractBlockCount" min="0" value="4"/><br/>
 						<label for="multiplyBlockCount">Aantal vermenigvuldigen</label><br/>
-						<input type="number" id="multiplyBlockCount" min="0" value="0"/><br/>
+						<input type="number" id="multiplyBlockCount" min="0" value="4"/><br/>
 					</div>
 				</div>
 				<button id="generate">Maak oefenblad</button>
