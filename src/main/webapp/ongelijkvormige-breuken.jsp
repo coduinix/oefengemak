@@ -12,8 +12,8 @@
 		<script src="js/breuken.js"></script>
 		
 		<style>
-			.fraction .top{border-bottom:solid black 1px; display:inline-block; float:left}
-			.fraction .bottom{ display:inline-block; clear:left; float:left}
+			.fraction .numerator {font-size: 80%; border-bottom: solid black 1px;}
+			.fraction .denominator {font-size: 80%;}
 		</style>
 		
 		<script type="text/javascript">
@@ -42,9 +42,9 @@
 					var remainder = numerator % denominator;
 					var wholeNumber = (numerator - remainder) / denominator;
 					numerator = remainder;
-					result += '<tr><td rowspan="2" style="padding-right: 0.3em;">' + wholeNumber + '</td><td style="border-bottom: solid black 1px;">' + numerator + '</td></tr><tr><td>' + denominator + '</td></tr>';
+					result += '<tr><td rowspan="2" style="padding-right: 0.3em;">' + wholeNumber + '</td><td class="numerator">' + numerator + '</td></tr><tr><td class="denominator">' + denominator + '</td></tr>';
 				} else {
-					result += '<tr><td style="border-bottom: solid black 1px;">' + numerator + '</td></tr><tr><td>' + denominator + '</td></tr>';
+					result += '<tr><td class="numerator">' + numerator + '</td></tr><tr><td class="denominator">' + denominator + '</td></tr>';
 				}
 				result += '</table>';
 				return result;
