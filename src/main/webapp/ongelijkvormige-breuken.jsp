@@ -66,10 +66,7 @@
 			}
 			
 			function renderBlocks(exercises, perBlock) {
-				console.log("exercises", exercises);
-				console.log("perBlock", perBlock);
 				var blockCount = exercises.length / perBlock;
-				console.log("blockCount", blockCount);
 				for (i = 0; i < blockCount; i++) {
 					var blockExercises = exercises.splice(0, perBlock);
 					renderBlock(blockExercises);
@@ -77,12 +74,7 @@
 			}
 			
 			function generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount) {
-				var exerciseOne = {lhs: [1, 2], rhs: [5, 6], result: [8, 6], operator: '+'};
-				var exerciseTwo = {lhs: [1, 2], rhs: [27, 28], result: [41, 28], operator: '+'};
-				var exercises = [exerciseOne, exerciseTwo];
-				/*var totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
-				var exercises = generateMixedExercises(tables, totalCount, generateTafelSommen);*/
-				
+				var exercises = generateAddFractions(maxFraction, perBlock * addBlockCount);
 				renderBlocks(exercises, perBlock);
 			}
 			
