@@ -31,8 +31,8 @@
 			}
 			
 			function renderFraction(fraction) {
-				var numerator = fraction[0];
-				var denominator = fraction[1];
+				var numerator = fraction.numerator;
+				var denominator = fraction.denominator;
 				
 				var result = '<table border="0" cellspacing="0" cellpadding="0">';
 				

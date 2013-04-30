@@ -17,8 +17,8 @@ Fraction.prototype.reduce = function() {
 }
 
 function generateAddFractions(maxFraction, count) {
-	var exerciseOne = {lhs: [1, 2], rhs: [5, 6], result: [8, 6], operator: '+'};
-	var exerciseTwo = {lhs: [1, 2], rhs: [27, 28], result: [41, 28], operator: '+'};
+	var exerciseOne = {lhs: new Fraction(1, 2), rhs: new Fraction(5, 6), result: new Fraction(8, 6), operator: '+'};
+	var exerciseTwo = {lhs: new Fraction(1, 2), rhs: new Fraction(27, 28), result: new Fraction(41, 28), operator: '+'};
 	
 	return [exerciseOne, exerciseTwo];
 }
