@@ -10,7 +10,3 @@ eenvoudig in te stellen.
 Op veler verzoek wordt er naast de opgaves ook een antwoordvel gegenereerd om het 
 nakijken door de leerkracht te versnellen.
 </div>
-<h3 class="tag-head">Het onstaan</h3>
-<div class="section">
-Hier komt meer informatie over het ontstaan en de achtergrond van oefengemak.nl
-</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ongelijkvormige breuken</title>
+		<title>Gelijknamige breuken</title>
 		<link rel="stylesheet" href="css/general.css" type="text/css"/>
 		<link type="text/css" href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 		
@@ -12,8 +12,9 @@
 		<script src="js/breuken.js"></script>
 		
 		<style>
-			.fraction .numerator {font-size: 80%; border-bottom: solid black 1px;}
-			.fraction .denominator {font-size: 80%;}
+			.fraction .numerator {font-size: 80%; border-bottom: solid black 1px; text-align: center; padding-bottom: 1px;}
+			.fraction .denominator {font-size: 80%; text-align: center;}
+			.box>table>tbody>tr {vertical-align: middle;}
 		</style>
 		
 		<script type="text/javascript">
@@ -34,7 +35,7 @@
 				var numerator = fraction.numerator;
 				var denominator = fraction.denominator;
 				
-				var result = '<table border="0" cellspacing="0" cellpadding="0">';
+				var result = '<table border="0" cellspacing="0" cellpadding="0" align="center">';
 				
 				if (numerator == denominator)
 					result += '<tr><td>1</td></tr>';
