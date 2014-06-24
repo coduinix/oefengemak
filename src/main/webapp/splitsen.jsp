@@ -58,7 +58,7 @@
 		</script>
 	</head>
 	<body>
-		<%@include file='analyticstracking.jsp'%>
+		<%@include file='/WEB-INF/pages/analyticstracking.jsp'%>
 		<div class="wrap">
 			<div class="config ui-widget noprint">
 				<div class="ui-widget-header">Opties</div>
@@ -108,4 +108,4 @@
 			</div>
 		</div>
 	</body>
-</html>
+</html>file:///home/hinse/ecl-workspaces/oefengemak/src/main/webapp/breuken-gelijknamig.jsp
