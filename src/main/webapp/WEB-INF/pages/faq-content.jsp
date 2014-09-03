@@ -1,17 +1,19 @@
-<h3 class="tag-head">Waar kan ik suggesties voor extra opties/oefenbladen naar toe sturen?</h3>
-<div class="section">
-Opmerkingen en suggesties zijn natuurlijk altijd van harte welkom. Deze kunt u sturen naar <a href="mailto:info@oefengemak.nl">info@oefengemak.nl</a>
-of stuur een tweet naar <a href="http://twitter.com/oefengemak">@oefengemak</a>
-</div>
-
-<h3 class="tag-head">Met welke internet browser kan ik de oefensommen het beste maken?</h3>
-<div class="section">
-De oefengemak website is gemaakt voor recente versies van de bekende internet browsers zoals Google Chrome, Mozilla Firefox en Microsoft InternetExplorer.
-Mocht u problemen ondervinden bij de weergave van de website laat het ons dan weten via bovenstaande contactgegevens.
-</div>
-
-<div class="section">
-<h3 class="tag-head">Zelf een vraag?</h3>
-Om uw eigen vraag te stellen kunt u een emailbericht sturen naar
-<a href="mailto:info@oefengemak.nl">info@oefengemak.nl</a>
+<div class="container">
+	<h3 class="tag-head">Waar kan ik suggesties voor extra opties/oefenbladen naar toe sturen?</h3>
+	<div class="section">
+	Opmerkingen en suggesties zijn natuurlijk altijd van harte welkom. Deze kunt u sturen naar <a href="mailto:info@oefengemak.nl">info@oefengemak.nl</a>
+	of stuur een tweet naar <a href="http://twitter.com/oefengemak">@oefengemak</a>
+	</div>
+	
+	<h3 class="tag-head">Met welke internet browser kan ik de oefensommen het beste maken?</h3>
+	<div class="section">
+	De oefengemak website is gemaakt voor recente versies van de bekende internet browsers zoals Google Chrome, Mozilla Firefox en Microsoft InternetExplorer.
+	Mocht u problemen ondervinden bij de weergave van de website laat het ons dan weten via bovenstaande contactgegevens.
+	</div>
+	
+	<div class="section">
+	<h3 class="tag-head">Zelf een vraag?</h3>
+	Om uw eigen vraag te stellen kunt u een emailbericht sturen naar
+	<a href="mailto:info@oefengemak.nl">info@oefengemak.nl</a>
+	</div>
 </div>
