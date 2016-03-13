@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Deelsommen</title>
+		<link rel="stylesheet" href="css/general.css" type="text/css"/>
+		<link type="text/css" href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
+		
+		<script src="js/generator.js"></script>
+		<script src="js/delen.js"></script>
+		
+		<script type="text/javascript">
+			function renderRow(exercise, exerciseType, includeAnswer) {
+				var cells = [exercise.lhs, exercise.rhs, exercise.result];
+				var modIndex;
+				
+				switch (exerciseType) {
+					case 'lhs' :
+						modIndex = 0;
+						break;
+					case 'rhs' :
+						modIndex = 1;
+						break;
+					case 'result' :
+						modIndex = 2;
+						break;
+				}
+				if (includeAnswer) {
+					cells[modIndex] = '<b>' + cells[modIndex] + '</b>';
+				} else {
+					cells[modIndex] = '...';
+				}
+				return '<tr><td>' + cells[0] + '</td><td>:</td><td>' + cells[1] + '</td><td>=</td><td>' + cells[2] + '</td></tr>';
+			}
+		
+			function appendBlock(selector, exercises, exerciseType, includeAnswer) {
+				var renderedBlock = '<div class="box"><table>';
+				for (var idx in exercises) {
+					var exercise = exercises[idx];
+					renderedBlock += renderRow(exercise, exerciseType, includeAnswer);
+				}
+				renderedBlock += '</table></div>';
+				$(selector).append(renderedBlock);
+			}
+		
+			function renderBlock(exercises, exerciseType) {
+				appendBlock('#studentBlockHolder', exercises, exerciseType, false);
+				appendBlock('#teacherBlockHolder', exercises, exerciseType, true);
+			}
+			
+			function renderBlocks(exercises, perBlock, blockCount, exerciseType) {
+				for (i = 0; i < blockCount; i++) {
+					var blockExercises = exercises.splice(0, perBlock);
+					renderBlock(blockExercises, exerciseType);
+				}
+			}
+			
+			function renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
+				var start = 0;
+				renderBlocks(exercises, perBlock, resultBlockCount, 'result');
+				renderBlocks(exercises, perBlock, rhsBlockCount, 'rhs');
+				renderBlocks(exercises, perBlock, lhsBlockCount, 'lhs');
+			}
+			
+			function generateExercises(tables, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
+				var totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
+				var exercises = generateMixedExercises(tables, totalCount, generateDeelSommen);
+				
+				renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+			}
+			
+			$(document).ready(function() {
+				$('#generate').button().click(function() {
+					$('.box-container').empty();
+					var tables = [1,2,3,4,5,6,7,8,9,10];
+					var perBlock = parseInt($('#perBlock').val());
+					var resultBlockCount = parseInt($('#resultBlockCount').val());
+					var lhsBlockCount = parseInt($('#lhsBlockCount').val());
+					var rhsBlockCount = parseInt($('#rhsBlockCount').val());
+					$('.form-title').text($('#formTitleInput').val());
+					generateExercises(tables, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<%@include file='/WEB-INF/pages/analyticstracking.jsp'%>
+		<div class="wrap">
+			<div class="config ui-widget noprint">
+				<div class="ui-widget-header">Opties</div>
+				<div class="form-input ui-widget-content">
+					<div class="">
+						<label for="formTitleInput">Titel oefenblad</label><br/>
+						<input type="text" id="formTitleInput"/>
+					</div>
+					<div class="">
+						<label for="perBlock">Sommen per blok</label><br/>
+						<input type="number" id="perBlock" value="5" min="1"/><br/>
+						<label for="resultBlockCount">Aantal 30:5=...</label><br/>
+						<input type="number" id="resultBlockCount" min="0" value="4"/><br/>
+						<label for="lhsBlockCount">Aantal ...:5=6</label><br/>
+						<input type="number" id="lhsBlockCount" min="0" value="4"/><br/>
+						<label for="rhsBlockCount">Aantal 30:...=6</label><br/>
+						<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
+					</div>
+				</div>
+				<button id="generate">Maak oefenblad</button>
+			</div>
+			<div class="form">
+				<div class="page student">
+					<div class="page-head">
+						<div class="form-title">Titel oefenblad</div>
+						<div class="name-input">
+							<span>Naam:</span>
+							<span class="name-placeholder">______________</span>
+						</div>
+					</div>
+					<div id="studentBlockHolder" class="box-container student">
+					</div>
+				</div>
+				<div class="page teacher">
+					<div class="page-head">
+						<div class="form-title">Titel oefenblad</div>
+						<div class="name-input">
+							<span>Antwoordenvel</span>
+						</div>
+					</div>
+					<div id="teacherBlockHolder" class="box-container teacher">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

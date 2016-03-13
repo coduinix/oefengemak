@@ -4,6 +4,7 @@ Kies voor een van onderstaande types sommen om te genereren:
 <ul>
 	<li><a href="splitsen.jsp">Splitsen</a></li>
 	<li><a href="tafels.jsp">Tafels</a></li>
+	<li><a href="delen.jsp">Delen</a></li>
 	<li><a href="breuken-gelijknamig.jsp">Gelijknamige breuken</a></li>
 </ul>
 </div>
