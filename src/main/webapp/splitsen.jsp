@@ -108,4 +108,4 @@
 			</div>
 		</div>
 	</body>
-</html>file:///home/hinse/ecl-workspaces/oefengemak/src/main/webapp/breuken-gelijknamig.jsp
+</html>
