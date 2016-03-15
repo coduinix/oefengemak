@@ -49,6 +49,7 @@
 							<ul class="dropdown-menu" role="menu">
 								<li class='${pageScope.pageUrl == "splitsen.jsp" ? "active" : ""}'><a href="splitsen.jsp">Splitsen</a></li>
 								<li class='${pageScope.pageUrl == "tafels.jsp" ? "active" : ""}'><a href="tafels.jsp">Tafels</a></li>
+								<li class='${pageScope.pageUrl == "delen.jsp" ? "active" : ""}'><a href="delen.jsp">Delen</a></li>
 							</ul>
 						</li>
 						<li class='${pageScope.pageUrl == "about.jsp" ? "active" : ""}'><a href="about.jsp">Over oefengemak</a></li>
