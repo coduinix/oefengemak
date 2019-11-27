@@ -105,7 +105,7 @@
 		</script>
 	</head>
 	<body>
-		<%@include file='/WEB-INF/pages/analyticstracking.jsp'%>
+		<?php include "templates/analyticstracking.php"; ?>
 		<div class="wrap">
 			<div class="config ui-widget noprint">
 				<div class="ui-widget-header">Opties</div>
