@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Tafel sommen</title>
+		<title>Deelsommen</title>
 		<link rel="stylesheet" href="css/general.css" type="text/css"/>
 		<link type="text/css" href="css/redmond/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
 		
@@ -9,7 +9,7 @@
 		<script type="text/javascript" src="js/jquery-ui-1.8.16.custom.min.js"></script>
 		
 		<script src="js/generator.js"></script>
-		<script src="js/tafels.js"></script>
+		<script src="js/delen.js"></script>
 		
 		<script type="text/javascript">
 			function renderRow(exercise, exerciseType, includeAnswer) {
@@ -32,7 +32,7 @@
 				} else {
 					cells[modIndex] = '...';
 				}
-				return '<tr><td>' + cells[0] + '</td><td>x</td><td>' + cells[1] + '</td><td>=</td><td>' + cells[2] + '</td></tr>';
+				return '<tr><td>' + cells[0] + '</td><td>:</td><td>' + cells[1] + '</td><td>=</td><td>' + cells[2] + '</td></tr>';
 			}
 		
 			function appendBlock(selector, exercises, exerciseType, includeAnswer) {
@@ -66,7 +66,7 @@
 			
 			function generateExercises(tables, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
 				var totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
-				var exercises = generateMixedExercises(tables, totalCount, generateTafelSommen);
+				var exercises = generateMixedExercises(tables, totalCount, generateDeelSommen);
 				
 				renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
 			}
@@ -74,10 +74,7 @@
 			$(document).ready(function() {
 				$('#generate').button().click(function() {
 					$('.box-container').empty();
-					var tables = new Array();
-					$(':checkbox:checked').each(function (idx, cb) {
-						tables.push(parseInt(cb.value));
-					});
+					var tables = [1,2,3,4,5,6,7,8,9,10];
 					var perBlock = parseInt($('#perBlock').val());
 					var resultBlockCount = parseInt($('#resultBlockCount').val());
 					var lhsBlockCount = parseInt($('#lhsBlockCount').val());
@@ -89,7 +86,6 @@
 		</script>
 	</head>
 	<body>
-		<?php include "templates/analyticstracking.php"; ?>
 		<div class="wrap">
 			<div class="config ui-widget noprint">
 				<div class="ui-widget-header">Opties</div>
@@ -99,26 +95,13 @@
 						<input type="text" id="formTitleInput"/>
 					</div>
 					<div class="">
-						<input type="checkbox" value="0">Tafel 0</input><br/>
-						<input type="checkbox" value="1">Tafel 1</input><br/>
-						<input type="checkbox" value="2">Tafel 2</input><br/>
-						<input type="checkbox" value="3">Tafel 3</input><br/>
-						<input type="checkbox" value="4">Tafel 4</input><br/>
-						<input type="checkbox" value="5">Tafel 5</input><br/>
-						<input type="checkbox" value="6">Tafel 6</input><br/>
-						<input type="checkbox" value="7">Tafel 7</input><br/>
-						<input type="checkbox" value="8">Tafel 8</input><br/>
-						<input type="checkbox" value="9">Tafel 9</input><br/>
-						<input type="checkbox" value="10">Tafel 10</input><br/>
-					</div>
-					<div class="">
 						<label for="perBlock">Sommen per blok</label><br/>
 						<input type="number" id="perBlock" value="5" min="1"/><br/>
-						<label for="resultBlockCount">Aantal 6x5=...</label><br/>
+						<label for="resultBlockCount">Aantal 30:5=...</label><br/>
 						<input type="number" id="resultBlockCount" min="0" value="4"/><br/>
-						<label for="lhsBlockCount">Aantal ...x5=30</label><br/>
+						<label for="lhsBlockCount">Aantal ...:5=6</label><br/>
 						<input type="number" id="lhsBlockCount" min="0" value="4"/><br/>
-						<label for="rhsBlockCount">Aantal 6x...=30</label><br/>
+						<label for="rhsBlockCount">Aantal 30:...=6</label><br/>
 						<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
 					</div>
 				</div>
