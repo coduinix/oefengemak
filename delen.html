@@ -23,29 +23,7 @@ title: Deelsommen
 		</div>
 		<button id="generate">Maak oefenblad</button>
 	</div>
-	<div class="form">
-		<div class="page student">
-			<div class="page-head">
-				<div class="form-title">Titel oefenblad</div>
-				<div class="name-input">
-					<span>Naam:</span>
-					<span class="name-placeholder">______________</span>
-				</div>
-			</div>
-			<div id="studentBlockHolder" class="box-container student">
-			</div>
-		</div>
-		<div class="page teacher">
-			<div class="page-head">
-				<div class="form-title">Titel oefenblad</div>
-				<div class="name-input">
-					<span>Antwoordenvel</span>
-				</div>
-			</div>
-			<div id="teacherBlockHolder" class="box-container teacher">
-			</div>
-		</div>
-	</div>
+	{% include exercise_output.html %}
 </div>
 
 <script src="js/delen.js"></script>
