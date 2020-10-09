@@ -113,6 +113,7 @@ title: Gelijknamige breuken
 
 	$(document).ready(function() {
 		$('#generate').button().click(function() {
+			ga('send', 'event', 'Oefenblad', 'genereer', 'gelijknamige breuken');
 			$('.box-container').empty();
 			$('.form-title').text($('#formTitleInput').val());
 

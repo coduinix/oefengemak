@@ -103,6 +103,7 @@ title: Tafel sommen
 
 	$(document).ready(function() {
 		$('#generate').button().click(function() {
+			ga('send', 'event', 'Oefenblad', 'genereer', 'tafels');
 			$('.box-container').empty();
 			var tables = new Array();
 			$(':checkbox:checked').each(function (idx, cb) {

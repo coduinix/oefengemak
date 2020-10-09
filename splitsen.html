@@ -64,6 +64,7 @@ title: Splits sommen
 
 	$(document).ready(function() {
 		$('#generate').button().click(function() {
+			ga('send', 'event', 'Oefenblad', 'genereer', 'splitsen');
 			$('.box-container').empty();
 			var nrs = new Array();
 			$(':checkbox:checked').each(function (idx, cb) {
