@@ -35,6 +35,7 @@ title: Tafel sommen
 			</div>
 		</div>
 		<button id="generate">Maak oefenblad</button>
+		<button id="print">Print</button>
 	</div>
 	{% include exercise_output.html %}
 </div>
@@ -102,6 +103,7 @@ title: Tafel sommen
 	}
 
 	$(document).ready(function() {
+		var printButton = $('#print').button();
 		$('#generate').button().click(function() {
 			ga('send', 'event', 'Oefenblad', 'genereer', 'tafels');
 			$('.box-container').empty();
@@ -115,6 +117,12 @@ title: Tafel sommen
 			var rhsBlockCount = parseInt($('#rhsBlockCount').val());
 			$('.form-title').text($('#formTitleInput').val());
 			generateExercises(tables, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+			printButton.attr("disabled", false);
+		});
+		printButton.attr("disabled", true);
+		printButton.click(function() {
+			ga('send', 'event', 'Oefenblad', 'print', 'tafels');
+			window.print();
 		});
 	});
 </script>
