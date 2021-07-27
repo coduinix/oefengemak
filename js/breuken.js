@@ -16,13 +16,17 @@ function Fraction(numerator, denominator) {
 }
 
 Fraction.prototype.reduce = function() {
-	var factor = gcd(this.numerator, this.denominator);
+	const factor = gcd(this.numerator, this.denominator);
 	return new Fraction(this.numerator / factor, this.denominator / factor);
 }
 
 Fraction.prototype.convert = function(newDenominator) {
-	var factor = newDenominator / this.denominator;
+	const factor = newDenominator / this.denominator;
 	return new Fraction(this.numerator * factor, this.denominator * factor);
+}
+
+Fraction.prototype.isPositive = function() {
+	return this.numerator >= 0;
 }
 
 function add(fraction, otherFraction) {
@@ -61,11 +65,13 @@ function randomFraction(maxDenominator) {
 
 function generateFractionExercises(maxDenominator, count, combineFunc, operator) {
 	var exercises = [];
-	for (var i = 0; i < count; i++) {
+	while (exercises.length < count) {
 		var lhs = randomFraction(maxDenominator);
 		var rhs = randomFraction(maxDenominator);
 		var result = combineFunc(lhs, rhs).reduce();
-		exercises.push({lhs: lhs, rhs: rhs, result: result, operator: operator});
+		if (result.isPositive()) {
+			exercises.push({lhs: lhs, rhs: rhs, result: result, operator: operator});
+		}
 	}
 	return exercises;
 }
