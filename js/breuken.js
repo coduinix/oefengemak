@@ -45,6 +45,12 @@ function multiply(fraction, otherFraction) {
 	return new Fraction(numerator, denominator);
 }
 
+function divide(fraction, otherFraction) {
+	var numerator = fraction.numerator * otherFraction.denominator;
+	var denominator = fraction.denominator * otherFraction.numerator;
+	return new Fraction(numerator, denominator);
+}
+
 function combine(fraction, otherFraction, func) {
 	if (fraction.denominator == otherFraction.denominator) {
 		var newNumerator = func(fraction.numerator, otherFraction.numerator);
@@ -87,3 +93,8 @@ function generateSubtractFractions(maxDenominator, count) {
 function generateMultiplyFractions(maxDenominator, count) {
 	return generateFractionExercises(maxDenominator, count, multiply, 'x');
 }
+
+function generateDivideFractions(maxDenominator, count) {
+	return generateFractionExercises(maxDenominator, count, divide, ':');
+}
+

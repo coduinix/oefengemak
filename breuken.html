@@ -26,6 +26,8 @@ title: Gelijknamige breuken
 				<input type="number" id="subtractBlockCount" min="0" value="4"/><br/>
 				<label for="multiplyBlockCount">Aantal vermenigvuldigen</label><br/>
 				<input type="number" id="multiplyBlockCount" min="0" value="4"/><br/>
+				<label for="divideBlockCount">Aantal delen</label><br/>
+				<input type="number" id="divideBlockCount" min="0" value="4"/><br/>
 			</div>
 		</div>
 		<button id="generate">Maak oefenblad</button>
@@ -104,11 +106,12 @@ title: Gelijknamige breuken
 		}
 	}
 
-	function generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount) {
+	function generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount, divideBlockCount) {
 		var exercises = [];
 		exercises = exercises.concat(generateAddFractions(maxFraction, perBlock * addBlockCount));
 		exercises = exercises.concat(generateSubtractFractions(maxFraction, perBlock * subtractBlockCount));
-		exercises = exercises.concat(generateMultiplyFractions(maxFraction, perBlock * subtractBlockCount));
+		exercises = exercises.concat(generateMultiplyFractions(maxFraction, perBlock * multiplyBlockCount));
+		exercises = exercises.concat(generateDivideFractions(maxFraction, perBlock * divideBlockCount));
 		renderBlocks(exercises, perBlock);
 	}
 
@@ -124,8 +127,9 @@ title: Gelijknamige breuken
 			var addBlockCount = parseInt($('#addBlockCount').val());
 			var subtractBlockCount = parseInt($('#subtractBlockCount').val());
 			var multiplyBlockCount = parseInt($('#multiplyBlockCount').val());
+			var divideBlockCount = parseInt($('#divideBlockCount').val());
 
-			generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount);
+			generateExercises(maxFraction, perBlock, addBlockCount, subtractBlockCount, multiplyBlockCount, divideBlockCount);
 			printButton.attr("disabled", false);
 		});
 		printButton.attr("disabled", true);
