@@ -12,6 +12,14 @@
         gtag('config', 'UA-36007477-1');
     </script>
     <!-- End Global site tag -->
+    <script>
+        function trackEvent(event_category, action, event_label) {
+            gtag('event', action, {
+                'event_category': event_category,
+                'event_label': event_label
+            })
+        }
+    </script>
     <link rel="stylesheet" href="css/general.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
     <style>@page { size: A4 }</style>
