@@ -91,7 +91,7 @@ title: Deelsommen
 	$(document).ready(function() {
 		var printButton = $('#print').button();
 		$('#generate').button().click(function() {
-			ga('send', 'event', 'Oefenblad', 'genereer', 'delen');
+			trackEvent('Oefenblad', 'genereer', 'delen');
 			$('.box-container').empty();
 			var tables = [1,2,3,4,5,6,7,8,9,10];
 			var perBlock = parseInt($('#perBlock').val());
@@ -104,7 +104,7 @@ title: Deelsommen
 		});
 		printButton.attr("disabled", true);
 		printButton.click(function() {
-			ga('send', 'event', 'Oefenblad', 'print', 'delen');
+			trackEvent('Oefenblad', 'print', 'delen');
 			window.print();
 		});
 	});

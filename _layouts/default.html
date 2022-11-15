@@ -13,6 +13,14 @@
 
 			gtag('config', 'UA-36007477-1');
 		</script>
+		<script>
+			function trackEvent(event_category, action, event_label) {
+				gtag('event', action, {
+					'event_category': event_category,
+					'event_label': event_label
+				})
+			}
+		</script>
 		<!-- End Global site tag -->
 		<title>{{ page.title }}</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">

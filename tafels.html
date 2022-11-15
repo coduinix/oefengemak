@@ -105,7 +105,7 @@ title: Tafel sommen
 	$(document).ready(function() {
 		var printButton = $('#print').button();
 		$('#generate').button().click(function() {
-			ga('send', 'event', 'Oefenblad', 'genereer', 'tafels');
+			trackEvent('Oefenblad', 'genereer', 'tafels');
 			$('.box-container').empty();
 			var tables = new Array();
 			$(':checkbox:checked').each(function (idx, cb) {
@@ -121,7 +121,7 @@ title: Tafel sommen
 		});
 		printButton.attr("disabled", true);
 		printButton.click(function() {
-			ga('send', 'event', 'Oefenblad', 'print', 'tafels');
+			trackEvent('Oefenblad', 'print', 'tafels');
 			window.print();
 		});
 	});
