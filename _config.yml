@@ -1,3 +1,3 @@
-url: "https://oefengemak.nl" # the base hostname & protocol for your site
+url: "https://www.oefengemak.nl" # the base hostname & protocol for your site
 plugins:
   - jekyll-sitemap
