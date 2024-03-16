@@ -1,0 +1,122 @@
+---
+layout: exercises
+title: Min sommen
+---
+<div class="wrap">
+	<div class="config ui-widget noprint">
+		<div class="ui-widget-header">Opties</div>
+		<div class="form-input ui-widget-content">
+			<div class="">
+				<label for="formTitleInput">Titel oefenblad</label><br/>
+				<input type="text" id="formTitleInput"/>
+			</div>
+			<div class="">
+				<input type="radio" name="max" value="10" checked>t/m 10</input><br/>
+				<input type="radio" name="max" value="20">t/m 20</input><br/>
+				<input type="radio" name="max" value="50">t/m 50</input><br/>
+				<input type="radio" name="max" value="100">t/m 100</input><br/>
+				<input type="radio" name="max" value="1000">t/m 1000</input><br/>
+			</div>
+			<div class="">
+				<label for="perBlock">Sommen per blok</label><br/>
+				<input type="number" id="perBlock" value="5" min="1"/><br/>
+				<label for="resultBlockCount">Aantal 6-5=...</label><br/>
+				<input type="number" id="resultBlockCount" min="0" value="4"/><br/>
+				<label for="lhsBlockCount">Aantal ...-5=30</label><br/>
+				<input type="number" id="lhsBlockCount" min="0" value="4"/><br/>
+				<label for="rhsBlockCount">Aantal 35-...=30</label><br/>
+				<input type="number" id="rhsBlockCount" min="0" value="0"/><br/>
+			</div>
+		</div>
+		<button id="generate">Maak oefenblad</button>
+		<button id="print">Print</button>
+	</div>
+	{% include exercise_output.html %}
+</div>
+
+<script src="js/min.js"></script>
+
+<script type="text/javascript">
+	function renderRow(exercise, exerciseType, includeAnswer) {
+		var cells = [exercise.lhs, exercise.rhs, exercise.result];
+		var modIndex;
+
+		switch (exerciseType) {
+			case 'lhs' :
+				modIndex = 0;
+				break;
+			case 'rhs' :
+				modIndex = 1;
+				break;
+			case 'result' :
+				modIndex = 2;
+				break;
+		}
+		if (includeAnswer) {
+			cells[modIndex] = '<b>' + cells[modIndex] + '</b>';
+		} else {
+			cells[modIndex] = '...';
+		}
+		return '<tr><td>' + cells[0] + '</td><td>-</td><td>' + cells[1] + '</td><td>=</td><td>' + cells[2] + '</td></tr>';
+	}
+
+	function appendBlock(selector, exercises, exerciseType, includeAnswer) {
+		var renderedBlock = '<div class="box"><table>';
+		for (var idx in exercises) {
+			var exercise = exercises[idx];
+			renderedBlock += renderRow(exercise, exerciseType, includeAnswer);
+		}
+		renderedBlock += '</table></div>';
+		$(selector).append(renderedBlock);
+	}
+
+	function renderBlock(exercises, exerciseType) {
+		appendBlock('#studentBlockHolder', exercises, exerciseType, false);
+		appendBlock('#teacherBlockHolder', exercises, exerciseType, true);
+	}
+
+	function renderBlocks(exercises, perBlock, blockCount, exerciseType) {
+		for (i = 0; i < blockCount; i++) {
+			var blockExercises = exercises.splice(0, perBlock);
+			renderBlock(blockExercises, exerciseType);
+		}
+	}
+
+	function renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
+		renderBlocks(exercises, perBlock, resultBlockCount, 'result');
+		renderBlocks(exercises, perBlock, rhsBlockCount, 'rhs');
+		renderBlocks(exercises, perBlock, lhsBlockCount, 'lhs');
+	}
+
+	function generateExercises(max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
+		var totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
+		var allNrs = []
+		for (i = 1; i <= max; i++) {
+			allNrs.push(i);
+		}
+		var exercises = generateMixedExercises(allNrs, totalCount, generateMinSommen);
+
+		renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+	}
+
+	$(document).ready(function() {
+		var printButton = $('#print').button();
+		$('#generate').button().click(function() {
+			trackEvent('Oefenblad', 'genereer', 'min');
+			$('.box-container').empty();
+			var max = $("input:radio[name='max']:checked").val()
+			var perBlock = parseInt($('#perBlock').val());
+			var resultBlockCount = parseInt($('#resultBlockCount').val());
+			var lhsBlockCount = parseInt($('#lhsBlockCount').val());
+			var rhsBlockCount = parseInt($('#rhsBlockCount').val());
+			$('.form-title').text($('#formTitleInput').val());
+			generateExercises(max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+			printButton.attr("disabled", false);
+		});
+		printButton.attr("disabled", true);
+		printButton.click(function() {
+			trackEvent('Oefenblad', 'print', 'min');
+			window.print();
+		});
+	});
+</script>
