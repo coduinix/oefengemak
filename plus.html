@@ -11,11 +11,12 @@ title: Plus sommen
 				<input type="text" id="formTitleInput"/>
 			</div>
 			<div class="">
-				<input type="radio" name="max" value="10" checked>t/m 10</input><br/>
-				<input type="radio" name="max" value="20">t/m 20</input><br/>
-				<input type="radio" name="max" value="50">t/m 50</input><br/>
-				<input type="radio" name="max" value="100">t/m 100</input><br/>
-				<input type="radio" name="max" value="1000">t/m 1000</input><br/>
+				<input type="radio" name="range" value="10" checked>t/m 10</input><br/>
+				<input type="radio" name="range" value="10-20">t/m 20 zonder tientaloverschrijding</input><br/>
+				<input type="radio" name="range" value="20">t/m 20 met tientaloverschrijding</input><br/>
+				<input type="radio" name="range" value="50">t/m 50</input><br/>
+				<input type="radio" name="range" value="100">t/m 100</input><br/>
+				<input type="radio" name="range" value="1000">t/m 1000</input><br/>
 			</div>
 			<div class="">
 				<label for="perBlock">Sommen per blok</label><br/>
@@ -88,13 +89,13 @@ title: Plus sommen
 		renderBlocks(exercises, perBlock, lhsBlockCount, 'lhs');
 	}
 
-	function generateExercises(max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
-		var totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
+	function generateExercises(min, max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount) {
+		const totalCount = perBlock * (lhsBlockCount + rhsBlockCount + resultBlockCount);
 		var allNrs = []
-		for (i = 1; i <= max; i++) {
+		for (let i = min; i <= max; i++) {
 			allNrs.push(i);
 		}
-		var exercises = generateMixedExercises(allNrs, totalCount, generatePlusSommen);
+		const exercises = generateMixedExercises(allNrs, totalCount, generatePlusSommen(min));
 
 		renderExercises(exercises, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
 	}
@@ -104,13 +105,16 @@ title: Plus sommen
 		$('#generate').button().click(function() {
 			trackEvent('Oefenblad', 'genereer', 'plus');
 			$('.box-container').empty();
-			var max = $("input:radio[name='max']:checked").val()
+			var range = $("input:radio[name='range']:checked").val()
 			var perBlock = parseInt($('#perBlock').val());
 			var resultBlockCount = parseInt($('#resultBlockCount').val());
 			var lhsBlockCount = parseInt($('#lhsBlockCount').val());
 			var rhsBlockCount = parseInt($('#rhsBlockCount').val());
 			$('.form-title').text($('#formTitleInput').val());
-			generateExercises(max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
+			var rangeElems = range.split('-').map(s => parseInt(s));
+			var min = rangeElems.length === 2 ? rangeElems[0] : 0;
+			var max = rangeElems[rangeElems.length - 1];
+			generateExercises(min, max, perBlock, lhsBlockCount, rhsBlockCount, resultBlockCount);
 			printButton.attr("disabled", false);
 		});
 		printButton.attr("disabled", true);
