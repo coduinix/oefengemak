@@ -13,6 +13,15 @@ GitHub beveelt aan om [Bundler](http://bundler.io/) te gebruiken om Jekyll te in
 
 ### Lokaal draaien
 - Voer dit commando uit om de website te starten:
-  ```shell
-  jekyll serve
-  ```
+```shell
+bundle exec jekyll serve
+```
+
+OF in docker:
+```shell
+docker run --rm \                                                                                                                                        127 ✘ 
+  --volume="$PWD:/srv/jekyll:Z" \
+  --publish 4000:4000 --publish 35729:35729 \
+  jekyll/jekyll \
+  jekyll serve --draft --livereload
+```
