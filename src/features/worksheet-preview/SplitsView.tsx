@@ -21,11 +21,11 @@ function Cell({ exercise, slot, blank, mode }: SplitsViewProps & { slot: Slot })
 export function SplitsView({ exercise, blank, mode }: SplitsViewProps) {
   return (
     <div data-testid="exercise-row" className="worksheet mx-auto grid w-fit min-w-14 text-center text-sm">
-      <div className="border-b border-line px-2 py-1">
+      <div className="border-b border-ink-muted px-2 py-1">
         <Cell exercise={exercise} slot="result" blank={blank} mode={mode} />
       </div>
       <div className="grid grid-cols-2">
-        <div className="border-r border-line px-2 py-1">
+        <div className="border-r border-ink-muted px-2 py-1">
           <Cell exercise={exercise} slot="lhs" blank={blank} mode={mode} />
         </div>
         <div className="px-2 py-1">
