@@ -58,7 +58,7 @@ function SommenMenu() {
   }, [open])
 
   return (
-    <div ref={containerRef} className="relative" onBlur={() => setOpen(false)}>
+    <div ref={containerRef} className="relative">
       <button
         type="button"
         aria-expanded={open}
