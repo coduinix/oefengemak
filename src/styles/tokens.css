@@ -22,6 +22,9 @@
   --tint-breuken: #ecf3fe;
   --accent-breuken: #2b6cd2;
 
+  --postit-bg: #fff59d;
+  --postit-ink: #6b5d10;
+
   --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
   --font-ui: 'Nunito Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-worksheet:

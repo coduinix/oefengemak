@@ -27,7 +27,15 @@ Code: src/app/\*\*, src/features/worksheet-form/\*\*, src/features/worksheet-pre
 
 ## Landing page
 
-Sections in render order: `Hero` (title, body, three feature bullets) → a `Card` containing the chooser heading, the six `TypeCard`s (icon, name, blurb, arrow; tinted per type, `hover:shadow-lift`), `Steps` (three numbered steps), and `SupportBand` (tinted band with a button to `/doneren`).
+Sections in render order: `Hero` (title, body, three feature bullets, over a `notebook-lines` ruled
+background; alongside it a rotated `ExampleSheet` — a real `Worksheet` from a fixed seed rendered
+through `SheetView`, with a `Paperclip` icon overlay — and a rotated `PostIt` with static copy from
+`nl.home.postit`) → a `Card` containing the chooser heading, the six `TypeCard`s (icon, name,
+blurb, arrow; tinted per type, `hover:shadow-lift`), `Steps` (three numbered steps), and
+`SupportBand` (tinted band with a button to `/doneren`).
+
+`ExampleSheet` and `PostIt` are decorative and static — no motion, no live editing surface. The
+post-it's text is a plain string in `nl.ts`.
 
 Adding an exercise type adds a card automatically: the grid maps `EXERCISE_TYPES`. Only the icon and the tint/accent pair in that file's `VISUALS` map need a new entry.
 

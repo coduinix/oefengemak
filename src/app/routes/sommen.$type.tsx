@@ -25,8 +25,8 @@ function ExercisePage({ type }: { type: ExerciseType }) {
   }, [config, title, setConfig, setTitle])
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-      <div className="grid gap-4 print:hidden">
+    <div className="grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+      <div className="grid gap-4 print:hidden lg:sticky lg:top-24">
         <h1 className="font-display text-2xl font-bold">{typeStrings[type].title}</h1>
         <WorksheetForm
           type={type}

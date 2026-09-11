@@ -25,6 +25,9 @@
   --color-tint-breuken: var(--tint-breuken);
   --color-accent-breuken: var(--accent-breuken);
 
+  --color-postit-bg: var(--postit-bg);
+  --color-postit-ink: var(--postit-ink);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -58,6 +61,24 @@
 @utility worksheet {
   font-family: var(--font-worksheet);
   font-variant-numeric: tabular-nums;
+}
+
+.example-sheet .worksheet-sheet {
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+  padding: 1rem;
+  box-shadow: var(--shadow-lift);
+}
+
+@utility notebook-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1.75rem,
+    var(--color-line) 1.75rem,
+    var(--color-line) calc(1.75rem + 1px)
+  );
 }
 
 @layer base {

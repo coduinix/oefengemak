@@ -6,6 +6,7 @@ import {
   Divide,
   Heart,
   Minus,
+  Paperclip,
   PieChart,
   Plus,
   Printer,
@@ -14,9 +15,47 @@ import {
   X,
 } from 'lucide-react'
 import { EXERCISE_TYPES, type ExerciseType } from '@/domain/core'
+import { defaultPlus } from '@/domain/config'
+import { generateWorksheet } from '@/domain/worksheet'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
+import { SheetView } from '@/features/worksheet-preview/SheetView'
 import { nl, typeStrings } from '@/i18n/nl'
+
+const EXAMPLE_WORKSHEET = generateWorksheet({
+  title: nl.home.exampleTitle,
+  seed: 12345,
+  sections: [
+    {
+      config: {
+        ...defaultPlus,
+        layout: { perBlock: 3, counts: { result: 3, lhs: 0, rhs: 0 } },
+      },
+    },
+  ],
+})
+
+function ExampleSheet() {
+  return (
+    <div className="relative -rotate-2 justify-self-center">
+      <Paperclip
+        className="absolute -left-3 -top-4 size-8 -rotate-45 text-ink-muted"
+        aria-hidden="true"
+      />
+      <div className="example-sheet w-56 sm:w-64">
+        <SheetView worksheet={EXAMPLE_WORKSHEET} mode="student" />
+      </div>
+    </div>
+  )
+}
+
+function PostIt() {
+  return (
+    <div className="rotate-3 justify-self-center rounded-md bg-postit-bg p-4 text-center text-sm font-semibold text-postit-ink shadow-lift">
+      {nl.home.postit}
+    </div>
+  )
+}
 
 interface TypeVisual {
   icon: ComponentType<{ className?: string }>
@@ -37,22 +76,28 @@ const FEATURE_ICONS = [BadgeCheck, UserX, Printer]
 
 function Hero() {
   return (
-    <section className="grid gap-6 py-10">
-      <h1 className="max-w-2xl font-display text-4xl font-bold leading-tight sm:text-5xl">
-        {nl.home.heroTitle}
-      </h1>
-      <p className="max-w-xl text-lg text-ink-muted">{nl.home.heroBody}</p>
-      <ul className="grid gap-3">
-        {nl.home.features.map((feature, index) => {
-          const Icon = FEATURE_ICONS[index] ?? BadgeCheck
-          return (
-            <li key={feature} className="flex items-center gap-3 text-ink">
-              <Icon className="size-5 text-brand" />
-              {feature}
-            </li>
-          )
-        })}
-      </ul>
+    <section className="notebook-lines grid gap-8 rounded-card py-10 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:items-center">
+      <div className="grid gap-6">
+        <h1 className="max-w-2xl font-display text-4xl font-bold leading-tight sm:text-5xl">
+          {nl.home.heroTitle}
+        </h1>
+        <p className="max-w-xl text-lg text-ink-muted">{nl.home.heroBody}</p>
+        <ul className="grid gap-3">
+          {nl.home.features.map((feature, index) => {
+            const Icon = FEATURE_ICONS[index] ?? BadgeCheck
+            return (
+              <li key={feature} className="flex items-center gap-3 text-ink">
+                <Icon className="size-5 text-brand" />
+                {feature}
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+      <div className="grid gap-8 justify-items-center py-4">
+        <ExampleSheet />
+        <PostIt />
+      </div>
     </section>
   )
 }

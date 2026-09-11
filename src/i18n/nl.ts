@@ -126,6 +126,8 @@ export const nl = {
     heroTitle: 'Gratis oefenbladen voor het basisonderwijs',
     heroBody: 'Snel samenstellen, downloaden en printen. Voor leerkrachten én ouders.',
     features: ['100% gratis te gebruiken', 'Geen account nodig', 'Direct printen'],
+    exampleTitle: 'Voorbeeld',
+    postit: 'Nieuw: nu ook breuken oefenbladen!',
     chooseTitle: 'Kies een oefenblad',
     chooseBody: 'Voor welk onderwerp wil je een oefenblad maken?',
     howTitle: 'Zo werkt het',
