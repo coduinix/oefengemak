@@ -19,7 +19,7 @@ export function SheetView({ worksheet, mode }: SheetViewProps) {
           {mode === 'student' ? `${nl.sheet.name} ${nl.sheet.nameRule}` : nl.sheet.answers}
         </p>
       </header>
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 print:grid-cols-4">
         {worksheet.sections.flatMap((section) =>
           section.blocks.map((block) => (
             <BlockView key={block.id} block={block} type={section.type} mode={mode} />
