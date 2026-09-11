@@ -1,27 +1,26 @@
 # Oefengemak
-Broncode van de site oefengemak.nl
+
+Broncode van de site [oefengemak.nl](https://www.oefengemak.nl).
 
 ## Doel
-Oefengemak.nl is opgezet met als doel om eenvoudig oefenbladen te kunnen printen.
-De hoofdfocus zijn de splitssommen, en op speciaal verzoek zijn daarna nog enkele andere type sommen toegevoegd
+
+Oefengemak.nl is opgezet om eenvoudig oefenbladen te kunnen samenstellen en printen voor het
+basisonderwijs: splitsen, plus, min, tafels, delen en breuken. Geen account nodig, en een
+oefenblad zit volledig in de URL, dus je kunt hem bewaren of doorsturen.
 
 ## Ontwikkeling
-### Jekyll installeren
-Voordat de app gedraaid kan worden moet eerst `jekyll` worden geïnstalleerd, zie: https://jekyllrb.com/docs/installation/
 
-GitHub beveelt aan om [Bundler](http://bundler.io/) te gebruiken om Jekyll te installeren
-
-### Lokaal draaien
-- Voer dit commando uit om de website te starten:
-```shell
-bundle exec jekyll serve
+```bash
+npm install
+npm run dev        # dev server op http://localhost:5173
+npm run build      # productiebuild naar dist/
+npm run test       # tests
+npm run lint
 ```
 
-OF in docker:
-```shell
-docker run --rm \                                                                                                                                        127 ✘ 
-  --volume="$PWD:/srv/jekyll:Z" \
-  --publish 4000:4000 --publish 35729:35729 \
-  jekyll/jekyll \
-  jekyll serve --draft --livereload
-```
+## Documentatie
+
+Ontwerp en achtergrond staan in [`specs/`](specs/). Begin bij
+[`specs/README.md`](specs/README.md) — dat is de wegwijzer naar de rest.
+
+Werk je hier met een coding agent? [`CLAUDE.md`](CLAUDE.md) is het startpunt.

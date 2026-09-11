@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-canvas: var(--canvas);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus);
+
+  --color-tint-splitsen: var(--tint-splitsen);
+  --color-accent-splitsen: var(--accent-splitsen);
+  --color-tint-plus: var(--tint-plus);
+  --color-accent-plus: var(--accent-plus);
+  --color-tint-min: var(--tint-min);
+  --color-accent-min: var(--accent-min);
+  --color-tint-tafels: var(--tint-tafels);
+  --color-accent-tafels: var(--accent-tafels);
+  --color-tint-delen: var(--tint-delen);
+  --color-accent-delen: var(--accent-delen);
+  --color-tint-breuken: var(--tint-breuken);
+  --color-accent-breuken: var(--accent-breuken);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --font-display: var(--font-display);
+  --font-sans: var(--font-ui);
+  --font-worksheet: var(--font-worksheet);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+
+  --radius-card: var(--radius);
+}
+
+@utility worksheet {
+  font-family: var(--font-worksheet);
+  font-variant-numeric: tabular-nums;
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--brand-ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+}
+
+@media print {
+  body {
+    background-color: var(--surface);
+  }
+}

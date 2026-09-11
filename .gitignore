@@ -1,8 +1,6 @@
-build.properties
-target
-.settings
-.classpath
-.project
+node_modules
+dist
 .idea
-.jekyll-cache
-_site
+.DS_Store
+*.local
+coverage

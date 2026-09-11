@@ -1,0 +1,4507 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`breuken > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "+",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 6,
+          },
+          "operator": "+",
+          "result": {
+            "d": 4,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "+",
+          "result": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 2,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "+",
+          "result": {
+            "d": 30,
+            "kind": "frac",
+            "n": 29,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "+",
+          "result": {
+            "d": 56,
+            "kind": "frac",
+            "n": 47,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 6,
+          },
+          "operator": "+",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 8,
+            "kind": "frac",
+            "n": 11,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 7,
+          },
+        },
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": "+",
+          "result": {
+            "d": 8,
+            "kind": "frac",
+            "n": 9,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "+",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "+",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "+",
+          "result": {
+            "d": 20,
+            "kind": "frac",
+            "n": 31,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 8,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": "+",
+          "result": {
+            "d": 30,
+            "kind": "frac",
+            "n": 43,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 6,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 9,
+            "kind": "frac",
+            "n": 8,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": "+",
+          "result": {
+            "d": 18,
+            "kind": "frac",
+            "n": 19,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "+",
+          "result": {
+            "d": 35,
+            "kind": "frac",
+            "n": 44,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 6,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "+",
+          "result": {
+            "d": 9,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "-",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "-",
+          "result": {
+            "d": 18,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "-",
+          "result": {
+            "d": 35,
+            "kind": "frac",
+            "n": 4,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 4,
+          },
+        },
+      ],
+      "id": "s0-b4",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 8,
+          },
+          "operator": "-",
+          "result": {
+            "d": 10,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 8,
+          },
+          "operator": "-",
+          "result": {
+            "d": 18,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "-",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "-",
+          "result": {
+            "d": 15,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+      ],
+      "id": "s0-b5",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "-",
+          "result": {
+            "d": 14,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 12,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+      ],
+      "id": "s0-b6",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "-",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 0,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 6,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "-",
+          "result": {
+            "d": 30,
+            "kind": "frac",
+            "n": 13,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "-",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "-",
+          "result": {
+            "d": 21,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 8,
+          },
+          "operator": "-",
+          "result": {
+            "d": 15,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 6,
+          },
+        },
+      ],
+      "id": "s0-b7",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 8,
+          },
+          "operator": "×",
+          "result": {
+            "d": 25,
+            "kind": "frac",
+            "n": 8,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 4,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "×",
+          "result": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "×",
+          "result": {
+            "d": 20,
+            "kind": "frac",
+            "n": 9,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 9,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "×",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 8,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "×",
+          "result": {
+            "d": 28,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+      ],
+      "id": "s0-b8",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 35,
+            "kind": "frac",
+            "n": 9,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 24,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 7,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "×",
+          "result": {
+            "d": 27,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 8,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+      ],
+      "id": "s0-b9",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "×",
+          "result": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "×",
+          "result": {
+            "d": 45,
+            "kind": "frac",
+            "n": 8,
+          },
+          "rhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": "×",
+          "result": {
+            "d": 35,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "×",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 4,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+      ],
+      "id": "s0-b10",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": "×",
+          "result": {
+            "d": 14,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": "×",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "×",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 4,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": "×",
+          "result": {
+            "d": 14,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": "×",
+          "result": {
+            "d": 21,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+      ],
+      "id": "s0-b11",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 6,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 7,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 18,
+            "kind": "frac",
+            "n": 5,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 9,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 7,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 3,
+          },
+          "operator": ":",
+          "result": {
+            "d": 16,
+            "kind": "frac",
+            "n": 9,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 8,
+          },
+        },
+      ],
+      "id": "s0-b12",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": ":",
+          "result": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 4,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 20,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 20,
+          },
+          "rhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": ":",
+          "result": {
+            "d": 27,
+            "kind": "frac",
+            "n": 25,
+          },
+          "rhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+      ],
+      "id": "s0-b13",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 1,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 5,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 10,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 7,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 7,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": ":",
+          "result": {
+            "d": 7,
+            "kind": "frac",
+            "n": 4,
+          },
+          "rhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 10,
+            "kind": "frac",
+            "n": 7,
+          },
+          "operator": ":",
+          "result": {
+            "d": 10,
+            "kind": "frac",
+            "n": 21,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+      ],
+      "id": "s0-b14",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "operator": ":",
+          "result": {
+            "d": 1,
+            "kind": "frac",
+            "n": 6,
+          },
+          "rhs": {
+            "d": 9,
+            "kind": "frac",
+            "n": 1,
+          },
+        },
+        {
+          "lhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 6,
+          },
+          "operator": ":",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 6,
+          },
+          "rhs": {
+            "d": 7,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 5,
+            "kind": "frac",
+            "n": 3,
+          },
+          "rhs": {
+            "d": 6,
+            "kind": "frac",
+            "n": 5,
+          },
+        },
+        {
+          "lhs": {
+            "d": 8,
+            "kind": "frac",
+            "n": 5,
+          },
+          "operator": ":",
+          "result": {
+            "d": 16,
+            "kind": "frac",
+            "n": 15,
+          },
+          "rhs": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+        },
+        {
+          "lhs": {
+            "d": 2,
+            "kind": "frac",
+            "n": 1,
+          },
+          "operator": ":",
+          "result": {
+            "d": 3,
+            "kind": "frac",
+            "n": 2,
+          },
+          "rhs": {
+            "d": 4,
+            "kind": "frac",
+            "n": 3,
+          },
+        },
+      ],
+      "id": "s0-b15",
+    },
+  ],
+  "id": "s0",
+  "type": "breuken",
+}
+`;
+
+exports[`delen > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 12,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 14,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 18,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 28,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 40,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 90,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 60,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 35,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 54,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 49,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 24,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 16,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 36,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 20,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 15,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 24,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 56,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 24,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b4",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 24,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 54,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 90,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 20,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b5",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 21,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 20,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 27,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 16,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b6",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 56,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 63,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 25,
+          },
+          "operator": ":",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b7",
+    },
+  ],
+  "id": "s0",
+  "type": "delen",
+}
+`;
+
+exports[`min > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+      ],
+      "id": "s0-b4",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+      ],
+      "id": "s0-b5",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+      ],
+      "id": "s0-b6",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "-",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b7",
+    },
+  ],
+  "id": "s0",
+  "type": "min",
+}
+`;
+
+exports[`plus > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 0,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 0,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+      ],
+      "id": "s0-b4",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 0,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+      ],
+      "id": "s0-b5",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 1,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+      ],
+      "id": "s0-b6",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 0,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+      ],
+      "id": "s0-b7",
+    },
+  ],
+  "id": "s0",
+  "type": "plus",
+}
+`;
+
+exports[`splitsen > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "rhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "rhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 0,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "rhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "rhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 9,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 8,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "+",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+  ],
+  "id": "s0",
+  "type": "splitsen",
+}
+`;
+
+exports[`tafels > matches its golden snapshot at a fixed seed 1`] = `
+{
+  "blocks": [
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 12,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 14,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 18,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 28,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b0",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 40,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 7,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 90,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 60,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 35,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b1",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 54,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 49,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 24,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 4,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b2",
+    },
+    {
+      "blank": "result",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 16,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 2,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 36,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 2,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 20,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 15,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b3",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 24,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 8,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 56,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 3,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 24,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b4",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 24,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 5,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 54,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 90,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 20,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b5",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 6,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 3,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 21,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 7,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 10,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 20,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 2,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 9,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 27,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 3,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 4,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 16,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 4,
+          },
+        },
+      ],
+      "id": "s0-b6",
+    },
+    {
+      "blank": "lhs",
+      "exercises": [
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 56,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 8,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 6,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 6,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 1,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 7,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 63,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 9,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 1,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 10,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 10,
+          },
+        },
+        {
+          "lhs": {
+            "kind": "int",
+            "value": 5,
+          },
+          "operator": "×",
+          "result": {
+            "kind": "int",
+            "value": 25,
+          },
+          "rhs": {
+            "kind": "int",
+            "value": 5,
+          },
+        },
+      ],
+      "id": "s0-b7",
+    },
+  ],
+  "id": "s0",
+  "type": "tafels",
+}
+`;

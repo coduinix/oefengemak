@@ -1,0 +1,51 @@
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+.worksheet-sheet {
+  width: 100%;
+  max-width: 190mm;
+  min-height: 267mm;
+  margin: 0 auto;
+  padding: 12mm;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-soft);
+  break-after: page;
+}
+
+.worksheet-sheet:last-child {
+  break-after: auto;
+}
+
+.worksheet-block {
+  break-inside: avoid;
+}
+
+@media print {
+  html,
+  body,
+  #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    background: var(--surface) !important;
+  }
+
+  .worksheet-preview {
+    display: block;
+    gap: 0;
+  }
+
+  .worksheet-sheet {
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}

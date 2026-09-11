@@ -1,0 +1,54 @@
+:root {
+  --brand: #2b6cd2;
+  --brand-ink: #0b1f4d;
+  --ink: #334155;
+  --ink-muted: #68707a;
+  --line: #e7eaf0;
+  --surface: #ffffff;
+  --canvas: #f5f8fb;
+  --danger: #d2453f;
+  --focus: color-mix(in srgb, var(--brand) 45%, transparent);
+
+  --tint-splitsen: #fef3ee;
+  --accent-splitsen: #fc7960;
+  --tint-plus: #f1faf7;
+  --accent-plus: #3faf95;
+  --tint-min: #f4f1fd;
+  --accent-min: #8b6fe0;
+  --tint-tafels: #fefaec;
+  --accent-tafels: #e6a310;
+  --tint-delen: #fef2f4;
+  --accent-delen: #e8709b;
+  --tint-breuken: #ecf3fe;
+  --accent-breuken: #2b6cd2;
+
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-ui: 'Nunito Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-worksheet:
+    'Nunito Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --shadow-soft: 0 1px 2px rgb(11 31 77 / 0.04);
+  --shadow-lift: 0 6px 18px rgb(11 31 77 / 0.08);
+
+  --radius: 1rem;
+
+  --background: var(--canvas);
+  --foreground: var(--ink);
+  --card: var(--surface);
+  --card-foreground: var(--ink);
+  --popover: var(--surface);
+  --popover-foreground: var(--ink);
+  --primary: var(--brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--canvas);
+  --secondary-foreground: var(--brand-ink);
+  --muted: var(--canvas);
+  --muted-foreground: var(--ink-muted);
+  --accent: var(--tint-breuken);
+  --accent-foreground: var(--brand-ink);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--brand);
+  --destructive: var(--danger);
+  --destructive-foreground: #ffffff;
+}

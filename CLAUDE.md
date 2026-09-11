@@ -1,87 +1,51 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+## What this is
 
-## Overview
+**Oefengemak.nl** — a Dutch site where primary-school teachers generate and print practice
+worksheets (oefenbladen): splitsen, plus, min, tafels, delen and breuken.
 
-**Oefengemak.nl** is a Dutch website for generating and printing practice worksheets (oefenbladen), primarily for arithmetic exercises. The app is a static Jekyll site with client-side JavaScript generation of exercises.
+Frontend-only SPA: React 19, TypeScript, Vite, Tailwind v4, shadcn/ui, Zustand, React Router.
+No backend. A worksheet is encoded entirely in its URL, so it can be bookmarked and shared.
 
-**Current state:** This is a legacy application built with older tech (jQuery, Bootstrap 3, Jekyll). There is active redesign work in progress on the `redesign` branch.
+The legacy Jekyll + jQuery site was replaced wholesale on the `redesign` branch. It survives in
+git history and is a behavioural reference only — never a thing to port from.
 
-## Exercise Types
+## Commands
 
-The site supports these exercise types:
-- **Splitsen**: Breaking apart numbers (e.g., 25 → 20 + 5)
-- **Plus**: Addition exercises (with variations: `6 + 5 = ?`, `? + 5 = 30`, `6 + ? = 30`)
-- **Min**: Subtraction exercises (similar variations to Plus)
-- **Tafels**: Multiplication tables (times tables)
-- **Delen**: Division (up to 100)
-- **Breuken**: Fractions (up to 100)
-
-Each exercise type has a corresponding HTML page and JavaScript file that uses the core `generator.js` utilities.
-
-## Architecture
-
-**Core components:**
-- **Jekyll site**: Generates static HTML from layouts and pages
-  - `_layouts/default.html`: Main layout with navbar and analytics
-  - `_includes/`: Template partials (e.g., exercise_output.html)
-  - Exercise pages (*.html): Configuration UI + inline JS rendering
-- **JavaScript**: Client-side exercise generation
-  - `js/generator.js`: Core utilities for shuffling, generating mixed exercise sets
-  - `js/{exercise-type}.js`: Exercise-specific generation functions (e.g., `generatePlusSommen()`)
-  - Inline JS in each exercise page: Config handling, DOM rendering, print functionality
-- **Static files**: Bootstrap CSS, jQuery, Google Fonts, images
-
-**Data flow:**
-1. User sets options in the config panel (e.g., number range, exercises per block, exercise type)
-2. Click "Generate" → calls exercise-specific function (e.g., `generatePlusSommen()`)
-3. `generateMixedExercises()` creates shuffled set from multiple number ranges
-4. `renderBlocks()` generates two versions: student (with blanks) and teacher (with answers)
-5. Click "Print" → browser's native print dialog
-
-## Development
-
-### Setup
 ```bash
-# Install dependencies (Ruby + Jekyll)
-bundle install
-
-# Start local dev server with hot reload
-bundle exec jekyll serve
-
-# Or run in Docker
-docker run --rm \
-  --volume="$PWD:/srv/jekyll:Z" \
-  --publish 4000:4000 --publish 35729:35729 \
-  jekyll/jekyll \
-  jekyll serve --draft --livereload
+npm run dev        # Vite dev server
+npm run build      # typecheck + production build to dist/
+npm run test       # Vitest, full suite
+npm run lint       # ESLint
+npm run format     # Prettier
 ```
 
-Visit `http://localhost:4000` (or `http://localhost:4000/index.html` if using Docker)
+## Where the "why" lives
 
-### Build for production
-```bash
-bundle exec jekyll build
-# Output goes to _site/
-```
+Design and rationale live in `specs/`. **Start at `specs/README.md`** and follow its routing
+table — it tells you which one or two docs your task needs. Do not skip it for non-trivial work,
+and do not read the whole tree.
 
-## Key Files
+`specs/decisions/` holds the ADRs: what was rejected, and why.
 
-- `config.json`: Contains app configuration (may be legacy/unused)
-- `_config.yml`: Jekyll configuration with sitemap plugin
-- `Gemfile`: Ruby dependencies (Jekyll, jekyll-sitemap)
-- `.gitignore`: Excludes Jekyll build artifacts
+## Rules that hold even if you read no spec
 
-## Notes for Redesign
+- `src/domain/**` is pure: no React, no DOM, no `Math.random`, no `console`. Use the injected
+  `Rng`. A lint rule enforces this — it is a boundary, not a convention.
+- UI text is Dutch; code, identifiers, comments and specs are English. Every Dutch string lives
+  in `src/i18n/nl.ts`. The domain is string-free.
+- Colours and type come from Tailwind tokens. No hex value may appear outside
+  `src/styles/tokens.css`.
+- The URL is the source of truth for the rendered worksheet; Zustand is only the form's editing
+  buffer. Generation happens on URL change, never on keystroke.
+- Comments explain non-obvious _local_ choices only. Architectural reasoning belongs in `specs/`,
+  rejected alternatives in `specs/decisions/`. Do not narrate what the code already says.
 
-When redesigning:
-- The current JavaScript is tightly coupled to HTML DOM (jQuery selectors, inline scripts)
-- The `generator.js` utilities for shuffling and exercise generation are reusable
-- Each exercise type's generation function signature varies slightly
-- Google Analytics integration is embedded in the default layout
-- Bootstrap 3 CSS is legacy and should likely be replaced
+## Keeping specs honest
 
-## Design Reference
+A spec marked `CONTRACT` describes behaviour the code must satisfy. Changing that behaviour means
+editing the spec in the same commit. A spec marked `SNAPSHOT` records intent at a date and is
+never edited to match reality.
 
-Check `specs/frontpage-design.png` for the current redesign vision.
+When a contract and the code disagree, that is a bug — report it, do not silently follow the code.
