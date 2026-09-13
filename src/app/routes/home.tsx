@@ -87,7 +87,7 @@ function Hero() {
           })}
         </ul>
       </div>
-      <div className="grid gap-8 justify-items-center py-4">
+      <div className="hidden gap-8 justify-items-center py-4 lg:grid">
         <ExampleSheet />
         <PostIt />
       </div>
