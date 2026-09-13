@@ -39,7 +39,7 @@ Fractions are plain data with free functions in `core/fraction.ts`, not a class.
 
 `Section` exists only so a later builder can re-roll one part of a sheet without disturbing the rest. v1 always emits exactly one section.
 
-Student sheet vs answer sheet is **not** in the domain — it is a render mode over one `Worksheet`. Pagination is CSS.
+Student sheet vs answer sheet is **not** in the domain — it is a render mode over one `Worksheet`. Pagination is CSS — refined by [decisions/0007-js-measured-pagination.md](decisions/0007-js-measured-pagination.md): JS now decides which blocks land on which page, from measured DOM heights, but print itself is still driven by CSS `@page`/`break-after`, and block order stays exactly as `planBlocks()` produced it.
 
 ## Three separated concerns
 

@@ -77,13 +77,10 @@
   }
 }
 
-.example-sheet .worksheet-sheet {
+.example-sheet .worksheet-page {
   position: absolute;
   top: 0;
   left: 0;
-  width: 210mm;
-  max-width: none;
-  min-height: 297mm;
   transform: scale(var(--example-scale));
   transform-origin: top left;
   box-shadow: var(--shadow-lift);

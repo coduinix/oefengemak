@@ -13,6 +13,7 @@ Code: —
 | [0004](0004-no-ssr-in-v1.md)                | Plain CSR SPA in v1, no SSR or prerendering                 |
 | [0005](0005-print-css-not-pdf-lib.md)       | Print CSS + `window.print()`; native PDF export deferred    |
 | [0006](0006-explicit-carry-predicate.md)    | No-carry is an explicit predicate, not an emergent property |
+| [0007](0007-js-measured-pagination.md)      | On-screen page breaks computed from measured DOM heights    |
 
 ## Format
 

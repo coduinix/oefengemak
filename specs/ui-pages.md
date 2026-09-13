@@ -68,15 +68,18 @@ Validation runs on every render via `getGenerator(config.type).validate(config)`
 
 ## Worksheet preview
 
-`WorksheetPreview` renders two `SheetView`s over the same `Worksheet`: `mode="student"`, then `mode="answers"`. There is no toggle — see [print.md](print.md).
+`WorksheetPreview` renders two `SheetView`s over the same `Worksheet`: `mode="student"`, then `mode="answers"`, separated by a heavier labelled divider (`.worksheet-sheet-break`) distinct from the dotted in-sheet page break. There is no toggle — see [print.md](print.md).
 
-| Component      | Renders                                                                                                                                                    |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SheetView`    | `.worksheet-sheet` with a header — title left (`nl.sheet.untitled` when empty), `Naam: ______` or `Antwoordenvel` right — over a responsive grid of blocks |
-| `BlockView`    | one `.worksheet-block` bordered box; dispatches to `SplitsView` for splitsen, else `ExerciseRow`                                                           |
-| `ExerciseRow`  | a five-column `lhs op rhs = result` row in the `worksheet` utility, right-aligned                                                                          |
-| `TermView`     | dispatches on `Term.kind`: `int` prints the value, `frac` delegates to `FractionView`                                                                      |
-| `FractionView` | stacked or mixed fraction — display rules are owned by [exercises/breuken.md](exercises/breuken.md)                                                        |
+| Component            | Renders                                                                                                                          |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `SheetView`           | `.worksheet-sheet`: N fixed-width A4 `.worksheet-page`s, chunked by measured pagination (see `usePaginatedBlocks`)              |
+| `SheetHeader`         | the sheet's header — title left (`nl.sheet.untitled` when empty), `Naam: ______` or `Antwoordenvel` right — on the first page only |
+| `usePaginatedBlocks`  | chunks a sheet's flattened blocks into pages from real measured DOM heights; owns no markup — see [print.md](print.md)          |
+| `MeasurementProbe`    | renders every block once, hidden and off-screen, purely so `usePaginatedBlocks` can read real heights before painting          |
+| `BlockView`           | one `.worksheet-block` bordered box; dispatches to `SplitsView` for splitsen, else `ExerciseRow`                                |
+| `ExerciseRow`         | a five-column `lhs op rhs = result` row in the `worksheet` utility, right-aligned                                               |
+| `TermView`            | dispatches on `Term.kind`: `int` prints the value, `frac` delegates to `FractionView`                                           |
+| `FractionView`        | stacked or mixed fraction — display rules are owned by [exercises/breuken.md](exercises/breuken.md)                             |
 
 The `block.blank` slot renders per mode: `...` on the student sheet (`aria-hidden`, since it is a writing space and not content), the term in `<strong>` on the answer sheet. Every other slot prints its term in both modes.
 

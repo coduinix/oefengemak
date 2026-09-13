@@ -3,11 +3,15 @@
   margin: 10mm;
 }
 
+/* Groups one sheet's pages; carries no box styling of its own on screen. */
 .worksheet-sheet {
-  width: 100%;
-  max-width: 190mm;
-  min-height: 267mm;
   margin: 0 auto;
+}
+
+.worksheet-page {
+  width: 210mm;
+  height: 297mm;
+  box-sizing: border-box;
   padding: 12mm;
   background: var(--surface);
   border: 1px solid var(--line);
@@ -16,7 +20,7 @@
   break-after: page;
 }
 
-.worksheet-sheet:last-child {
+.worksheet-page--last {
   break-after: auto;
 }
 
@@ -40,9 +44,24 @@
   }
 
   .worksheet-sheet {
-    max-width: none;
-    min-height: 0;
+    width: auto !important;
+    height: auto !important;
     margin: 0;
+  }
+
+  /* The on-screen fit-to-viewport scaling must not survive into print: every
+     page prints at true A4 size, one after another, via .worksheet-page's
+     own break-after. */
+  .worksheet-scale {
+    position: static !important;
+    transform: none !important;
+    width: auto !important;
+  }
+
+  .worksheet-page {
+    width: auto;
+    height: auto;
+    max-width: none;
     padding: 0;
     border: none;
     border-radius: 0;

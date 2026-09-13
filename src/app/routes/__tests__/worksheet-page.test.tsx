@@ -9,8 +9,29 @@ import { defaultConfigs } from '@/domain/config'
 import { buildWorksheetUrl } from '@/domain/url'
 import { routes } from '@/app/router'
 
+// jsdom does no real layout, so every measured height is 0 — that's fine, pagination
+// just needs *a* consistent number, not a realistic one. observe() fires its callback
+// synchronously (real ResizeObserver is async) so the worksheet preview's measurement
+// pass resolves before test assertions run.
 class ResizeObserverStub {
-  observe() {}
+  #callback: ResizeObserverCallback
+
+  constructor(callback: ResizeObserverCallback) {
+    this.#callback = callback
+  }
+
+  observe(target: Element) {
+    const rect = { width: 0, height: 0 } as DOMRectReadOnly
+    const entry = {
+      target,
+      contentRect: rect,
+      borderBoxSize: [{ inlineSize: 0, blockSize: 0 }],
+      contentBoxSize: [{ inlineSize: 0, blockSize: 0 }],
+      devicePixelContentBoxSize: [{ inlineSize: 0, blockSize: 0 }],
+    } as unknown as ResizeObserverEntry
+    this.#callback([entry], this as unknown as ResizeObserver)
+  }
+
   unobserve() {}
   disconnect() {}
 }
@@ -20,6 +41,10 @@ function renderAt(path: string) {
   return render(<RouterProvider router={createMemoryRouter(routes, { initialEntries: [path] })} />)
 }
 
+function visibleTextMatches(text: string) {
+  return screen.getAllByText(text).filter((el) => !el.closest('[data-measurement-probe]'))
+}
+
 afterEach(cleanup)
 
 describe.each(EXERCISE_TYPES)('%s page', (type) => {
@@ -27,7 +52,9 @@ describe.each(EXERCISE_TYPES)('%s page', (type) => {
     const url = buildWorksheetUrl(defaultConfigs[type], 20260911, 'Weekblad')
     const { container } = renderAt(url)
     expect(container.querySelectorAll('.worksheet-sheet')).toHaveLength(2)
-    expect(screen.getAllByText('Antwoordenvel')).toHaveLength(1)
+    // Excludes the hidden measurement probe's duplicate; the answer sheet's real
+    // header and the sheet-boundary divider label both legitimately say this.
+    expect(visibleTextMatches('Antwoordenvel')).toHaveLength(2)
     expect(screen.getAllByText('Weekblad').length).toBeGreaterThanOrEqual(2)
     expect(container.querySelectorAll('.worksheet-block').length).toBeGreaterThan(0)
   })
