@@ -63,11 +63,29 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Shows a real A4 page shrunk to thumbnail size via transform, so proportions match print output. */
+.example-sheet {
+  position: relative;
+  aspect-ratio: 210 / 297;
+  overflow: hidden;
+  --example-scale: 0.2822; /* 224px (w-56) / 210mm rendered at 96dpi */
+}
+
+@media (min-width: 640px) {
+  .example-sheet {
+    --example-scale: 0.3226; /* 256px (sm:w-64) / 210mm rendered at 96dpi */
+  }
+}
+
 .example-sheet .worksheet-sheet {
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210mm;
   max-width: none;
-  min-height: 0;
-  padding: 1rem;
+  min-height: 297mm;
+  transform: scale(var(--example-scale));
+  transform-origin: top left;
   box-shadow: var(--shadow-lift);
 }
 

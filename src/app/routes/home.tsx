@@ -15,7 +15,7 @@ import {
   X,
 } from 'lucide-react'
 import { EXERCISE_TYPES, type ExerciseType } from '@/domain/core'
-import { defaultPlus } from '@/domain/config'
+import { defaultSplitsen } from '@/domain/config'
 import { generateWorksheet } from '@/domain/worksheet'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -25,14 +25,7 @@ import { nl, typeStrings } from '@/i18n/nl'
 const EXAMPLE_WORKSHEET = generateWorksheet({
   title: nl.home.exampleTitle,
   seed: 12345,
-  sections: [
-    {
-      config: {
-        ...defaultPlus,
-        layout: { perBlock: 3, counts: { result: 3, lhs: 0, rhs: 0 } },
-      },
-    },
-  ],
+  sections: [{ config: { ...defaultSplitsen, count: 48, perBlock: 4 } }],
 })
 
 function ExampleSheet() {
