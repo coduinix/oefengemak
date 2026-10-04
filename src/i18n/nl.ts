@@ -169,7 +169,7 @@ export const nl = {
   },
   doneren: {
     title: 'Steun Oefengemak',
-    body: 'Oefengemak is gratis en blijft gratis. De site wordt in vrije tijd gemaakt en onderhouden; de hosting betalen we zelf.',
+    body: 'Oefengemak is gratis. De site wordt in vrije tijd gemaakt en onderhouden; de hosting betalen we zelf.',
     comingSoon:
       'Een doneeroptie is in de maak. Zodra we een betaalmethode hebben die iDEAL ondersteunt, verschijnt hier een knop.',
     contact: 'Wil je nu al iets bijdragen of meedenken? Mail ons gerust.',
