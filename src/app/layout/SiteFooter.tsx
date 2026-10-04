@@ -9,7 +9,7 @@ const columns = [
   {
     title: 'Hoe het werkt',
     links: [
-      { to: '/sommen/plus', label: 'Maak een oefenblad' },
+      { to: '/sommen/splitsen', label: 'Maak een oefenblad' },
       { to: '/sommen/tafels', label: 'Tafels oefenen' },
     ],
     text: 'Kies een som, stel in en print direct.',

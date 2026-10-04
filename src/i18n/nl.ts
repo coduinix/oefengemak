@@ -34,7 +34,7 @@ export const typeStrings: Readonly<Record<ExerciseType, TypeStrings>> = {
   },
   breuken: {
     name: 'Breuken',
-    title: 'Gelijknamige breuken',
+    title: 'Breuken',
     blurb: 'Oefen breuken t/m 100',
   },
 }
