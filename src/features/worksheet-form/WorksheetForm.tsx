@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import { Printer, RefreshCw, Sparkles } from 'lucide-react'
+import { Printer, Sparkles } from 'lucide-react'
 import { MAX_TITLE_LENGTH, type ExerciseConfig } from '@/domain/config'
 import type { ExerciseType } from '@/domain/core'
 import { getGenerator } from '@/domain/generators'
@@ -17,17 +17,10 @@ interface WorksheetFormProps {
   type: ExerciseType
   hasWorksheet: boolean
   onGenerate: (config: ExerciseConfig, title: string) => void
-  onRegenerate: () => void
   onPrint: () => void
 }
 
-export function WorksheetForm({
-  type,
-  hasWorksheet,
-  onGenerate,
-  onRegenerate,
-  onPrint,
-}: WorksheetFormProps) {
+export function WorksheetForm({ type, hasWorksheet, onGenerate, onPrint }: WorksheetFormProps) {
   const titleId = useId()
   const config = useWorksheetFormStore((state) => state.config)
   const title = useWorksheetFormStore((state) => state.title)
@@ -76,10 +69,6 @@ export function WorksheetForm({
             </Button>
             {hasWorksheet ? (
               <>
-                <Button type="button" variant="secondary" onClick={onRegenerate}>
-                  <RefreshCw />
-                  {nl.actions.regenerate}
-                </Button>
                 <Button type="button" variant="outline" onClick={onPrint}>
                   <Printer />
                   {nl.actions.print}

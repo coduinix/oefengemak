@@ -14,7 +14,7 @@ function isExerciseType(value: string | undefined): value is ExerciseType {
 }
 
 function ExercisePage({ type }: { type: ExerciseType }) {
-  const { config, title, worksheet, generate, regenerate } = useWorksheetFromUrl(type)
+  const { config, title, worksheet, generate } = useWorksheetFromUrl(type)
   const print = usePrint(type)
   const setConfig = useWorksheetFormStore((state) => state.setConfig)
   const setTitle = useWorksheetFormStore((state) => state.setTitle)
@@ -32,7 +32,6 @@ function ExercisePage({ type }: { type: ExerciseType }) {
           type={type}
           hasWorksheet={worksheet !== null}
           onGenerate={generate}
-          onRegenerate={regenerate}
           onPrint={print}
         />
       </div>

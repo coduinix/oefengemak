@@ -42,7 +42,6 @@ export const typeStrings: Readonly<Record<ExerciseType, TypeStrings>> = {
 export const nl = {
   actions: {
     generate: 'Maak oefenblad',
-    regenerate: 'Nieuwe sommen',
     print: 'Print',
     copyLink: 'Kopieer link',
   },

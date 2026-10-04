@@ -1,13 +1,22 @@
 /**
  * @vitest-environment jsdom
  */
-import { afterEach, describe, expect, it } from 'vitest'
-import { cleanup, render, screen } from '@testing-library/react'
-import { RouterProvider, createMemoryRouter } from 'react-router-dom'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { cleanup, fireEvent, render, screen } from '@testing-library/react'
+import {
+  MemoryRouter,
+  RouterProvider,
+  createMemoryRouter,
+  useLocation,
+  useRoutes,
+} from 'react-router-dom'
 import { EXERCISE_TYPES } from '@/domain/core'
 import { defaultConfigs } from '@/domain/config'
 import { buildWorksheetUrl } from '@/domain/url'
 import { routes } from '@/app/router'
+
+const seeds: number[] = []
+vi.mock('@/lib/random-seed', () => ({ randomSeed: () => seeds.shift() ?? 1 }))
 
 // jsdom does no real layout, so every measured height is 0 — that's fine, pagination
 // just needs *a* consistent number, not a realistic one. observe() fires its callback
@@ -79,6 +88,34 @@ describe('robustness', () => {
     const button = screen.getByRole('button', { name: /Maak oefenblad/ })
     expect(button.hasAttribute('disabled')).toBe(true)
     expect(screen.getByText(/Kies minstens één tafel/)).toBeDefined()
+  })
+
+  it('has a single generate button that applies form edits with a fresh seed each click', () => {
+    seeds.length = 0
+    seeds.push(111, 222)
+    // A plain MemoryRouter navigates synchronously; the data router builds a Request whose
+    // AbortSignal jsdom's AbortController cannot satisfy.
+    let location: ReturnType<typeof useLocation> | undefined
+    function App() {
+      location = useLocation()
+      return useRoutes(routes)
+    }
+    render(
+      <MemoryRouter initialEntries={[buildWorksheetUrl(defaultConfigs.plus, 5, 'Oud')]}>
+        <App />
+      </MemoryRouter>,
+    )
+    expect(screen.queryByRole('button', { name: /Nieuwe sommen/ })).toBeNull()
+
+    fireEvent.change(screen.getByLabelText(/Titel/), { target: { value: 'Nieuw' } })
+    const generate = screen.getByRole('button', { name: /Maak oefenblad/ })
+    fireEvent.click(generate)
+    const first = new URLSearchParams(location?.search)
+    expect(first.get('s')).toBe((111).toString(36))
+    expect(first.get('t')).toBe('Nieuw')
+
+    fireEvent.click(generate)
+    expect(new URLSearchParams(location?.search).get('s')).toBe((222).toString(36))
   })
 
   it('gives the answer sheet bold answers the student sheet does not have', () => {

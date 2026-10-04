@@ -69,11 +69,11 @@ form → store → "Maak oefenblad" → navigate(buildWorksheetUrl(config, newSe
      → route reads useSearchParams() → useMemo(() => generateWorksheet(decode(params)))
 ```
 
-| Action                       | Navigation                                                     |
-| ---------------------------- | -------------------------------------------------------------- |
-| "Maak oefenblad"             | push, new seed                                                 |
-| "Nieuwe sommen"              | push, same config, fresh seed — Back walks previous worksheets |
-| Form tweak before generating | `replace: true`                                                |
+| Action           | Navigation                                                                          |
+| ---------------- | ----------------------------------------------------------------------------------- |
+| "Maak oefenblad" | push, form config and title, fresh seed on every click — Back walks previous sheets |
+
+There is one generate button. Pressing it with an unchanged form still draws a fresh seed, because to a teacher "generate" means "give me exercises". Editing the form never touches the URL; only generating does.
 
 Generation happens only on URL change, never on keystroke.
 

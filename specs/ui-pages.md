@@ -50,7 +50,7 @@ Layout is `grid lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]`: config panel left (
 
 ## Config panel
 
-`WorksheetForm` is the shared frame for all six types: a `Card` holding the title `Input`, `<OptionsPanel>`, the field-less issue list, and the button row (`Maak oefenblad`, then `Nieuwe sommen`, `Print` and `CopyLinkButton` once a worksheet exists).
+`WorksheetForm` is the shared frame for all six types: a `Card` holding the title `Input`, `<OptionsPanel>`, the field-less issue list, and the button row (`Maak oefenblad`, then `Print` and `CopyLinkButton` once a worksheet exists). `Maak oefenblad` is the only generate action: every click, valid form required, navigates with the form's config and title and a fresh seed.
 
 `registry.tsx` maps `ExerciseType → options component`. **Adding a type is one entry in that map** plus the component. `fields/` holds the reusable inputs — `NumberField`, `BlockCountField`, `PerBlockField`, `NumberSetField`, `RangeRadioField` — so an options component is a composition, never bespoke markup.
 
@@ -70,16 +70,16 @@ Validation runs on every render via `getGenerator(config.type).validate(config)`
 
 `WorksheetPreview` renders two `SheetView`s over the same `Worksheet`: `mode="student"`, then `mode="answers"`, separated by a heavier labelled divider (`.worksheet-sheet-break`) distinct from the dotted in-sheet page break. There is no toggle — see [print.md](print.md).
 
-| Component            | Renders                                                                                                                          |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| `SheetView`           | `.worksheet-sheet`: N fixed-width A4 `.worksheet-page`s, chunked by measured pagination (see `usePaginatedBlocks`)              |
-| `SheetHeader`         | the sheet's header — title left (`nl.sheet.untitled` when empty), `Naam: ______` or `Antwoordenvel` right — on the first page only |
-| `usePaginatedBlocks`  | chunks a sheet's flattened blocks into pages from real measured DOM heights; owns no markup — see [print.md](print.md)          |
-| `MeasurementProbe`    | renders every block once, hidden and off-screen, purely so `usePaginatedBlocks` can read real heights before painting          |
-| `BlockView`           | one `.worksheet-block` bordered box; dispatches to `SplitsView` for splitsen, else `ExerciseRow`                                |
-| `ExerciseRow`         | a five-column `lhs op rhs = result` row in the `worksheet` utility, right-aligned                                               |
-| `TermView`            | dispatches on `Term.kind`: `int` prints the value, `frac` delegates to `FractionView`                                           |
-| `FractionView`        | stacked or mixed fraction — display rules are owned by [exercises/breuken.md](exercises/breuken.md)                             |
+| Component            | Renders                                                                                                                            |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `SheetView`          | `.worksheet-sheet`: N fixed-width A4 `.worksheet-page`s, chunked by measured pagination (see `usePaginatedBlocks`)                 |
+| `SheetHeader`        | the sheet's header — title left (`nl.sheet.untitled` when empty), `Naam: ______` or `Antwoordenvel` right — on the first page only |
+| `usePaginatedBlocks` | chunks a sheet's flattened blocks into pages from real measured DOM heights; owns no markup — see [print.md](print.md)             |
+| `MeasurementProbe`   | renders every block once, hidden and off-screen, purely so `usePaginatedBlocks` can read real heights before painting              |
+| `BlockView`          | one `.worksheet-block` bordered box; dispatches to `SplitsView` for splitsen, else `ExerciseRow`                                   |
+| `ExerciseRow`        | a five-column `lhs op rhs = result` row in the `worksheet` utility, right-aligned                                                  |
+| `TermView`           | dispatches on `Term.kind`: `int` prints the value, `frac` delegates to `FractionView`                                              |
+| `FractionView`       | stacked or mixed fraction — display rules are owned by [exercises/breuken.md](exercises/breuken.md)                                |
 
 The `block.blank` slot renders per mode: `...` on the student sheet (`aria-hidden`, since it is a writing space and not content), the term in `<strong>` on the answer sheet. Every other slot prints its term in both modes.
 

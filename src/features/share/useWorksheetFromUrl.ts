@@ -14,7 +14,6 @@ interface WorksheetFromUrl {
   title: string
   worksheet: Worksheet | null
   generate: (config: ExerciseConfig, title: string) => void
-  regenerate: () => void
 }
 
 export function useWorksheetFromUrl(type: ExerciseType): WorksheetFromUrl {
@@ -43,9 +42,5 @@ export function useWorksheetFromUrl(type: ExerciseType): WorksheetFromUrl {
     [navigate],
   )
 
-  const regenerate = useCallback(() => {
-    navigate(buildWorksheetUrl(decoded.config, randomSeed(), decoded.title))
-  }, [decoded.config, decoded.title, navigate])
-
-  return { config: decoded.config, title: decoded.title, worksheet, generate, regenerate }
+  return { config: decoded.config, title: decoded.title, worksheet, generate }
 }
