@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { ChevronDown, Heart } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/cn'
 
 const sommen = [
@@ -108,13 +108,6 @@ export function SiteHeader() {
           <SommenMenu />
           <NavLink to="/about" className={navLinkClass}>
             Over Oefengemak
-          </NavLink>
-          <NavLink
-            to="/doneren"
-            className="ml-1 inline-flex items-center gap-2 rounded-xl border border-accent-splitsen/40 bg-tint-splitsen px-3 py-1.5 text-sm font-semibold text-accent-splitsen transition-shadow hover:shadow-soft"
-          >
-            <Heart className="size-4" />
-            Steun ons
           </NavLink>
         </nav>
       </div>

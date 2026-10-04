@@ -4,7 +4,6 @@ import {
   ArrowRight,
   BadgeCheck,
   Divide,
-  Heart,
   Minus,
   Paperclip,
   PieChart,
@@ -17,7 +16,6 @@ import {
 import { EXERCISE_TYPES, type ExerciseType } from '@/domain/core'
 import { defaultSplitsen } from '@/domain/config'
 import { generateWorksheet } from '@/domain/worksheet'
-import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { SheetView } from '@/features/worksheet-preview/SheetView'
 import { nl, typeStrings } from '@/i18n/nl'
@@ -134,23 +132,6 @@ function Steps() {
   )
 }
 
-function SupportBand() {
-  return (
-    <section className="grid items-center gap-4 rounded-card bg-tint-splitsen p-6 sm:grid-cols-[1fr_auto]">
-      <div className="grid gap-2">
-        <h2 className="font-display text-xl font-semibold">{nl.home.supportTitle}</h2>
-        <p className="text-sm text-ink">{nl.home.supportBody}</p>
-      </div>
-      <Button asChild size="lg">
-        <Link to="/doneren">
-          <Heart />
-          {nl.home.supportAction}
-        </Link>
-      </Button>
-    </section>
-  )
-}
-
 export function HomePage() {
   return (
     <div className="grid gap-8">
@@ -167,7 +148,6 @@ export function HomePage() {
             ))}
           </div>
           <Steps />
-          <SupportBand />
         </CardContent>
       </Card>
     </div>

@@ -50,9 +50,6 @@ export function SiteFooter() {
             >
               info@oefengemak.nl
             </a>
-            <Link to="/doneren" className="text-sm font-semibold text-brand hover:underline">
-              Steun ons
-            </Link>
           </div>
         </div>
         <p className="mt-10 text-center text-xs text-ink-muted">
